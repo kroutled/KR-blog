@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on My New Hugo Site</title>
-    <link>http://localhost:1313/posts/</link>
+    <link>https://example.org/posts/</link>
     <description>Recent content in Posts on My New Hugo Site</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 03 Oct 2024 14:34:54 +0200</lastBuildDate>
-    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://example.org/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>My First Post</title>
-      <link>http://localhost:1313/posts/my-first-post/</link>
+      <link>https://example.org/posts/my-first-post/</link>
       <pubDate>Thu, 03 Oct 2024 14:34:54 +0200</pubDate>
-      <guid>http://localhost:1313/posts/my-first-post/</guid>
+      <guid>https://example.org/posts/my-first-post/</guid>
       <description>&lt;h1 id=&#34;hello-world-kroutled-here&#34;&gt;Hello world, Kroutled here&lt;/h1&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;I guess this is just some markdown as a testy test&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;well-that-should-do-it-for-now&#34;&gt;Well that should do it for now&lt;/h2&gt;</description>
     </item>
   </channel>
