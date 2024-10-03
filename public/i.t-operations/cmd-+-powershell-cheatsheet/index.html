@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>My New Hugo Site</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="File and Directory Navigation (CMD &amp; PowerShell)
+
+  
+      
+          Command (CMD/PowerShell)
+          Description
+      
+  
+  
+      
+          cd
+          Display the current directory or change the directory.
+      
+      
+          cd \path\to\directory
+          Change to a specified directory.
+      
+      
+          cd ..
+          Move up one directory level.
+      
+      
+          dir
+          List files and directories in the current directory.
+      
+      
+          ls (PowerShell)
+          List files and directories in the current directory.
+      
+      
+          pwd (PowerShell)
+          Print working directory (current location).
+      
+  
+
+File and Directory Operations (CMD &amp; PowerShell)
+
+  
+      
+          Command
+          Description
+      
+  
+  
+      
+          md dirname or mkdir dirname
+          Create a new directory.
+      
+      
+          rd dirname or rmdir dirname
+          Remove an empty directory.
+      
+      
+          del filename or rm filename
+          Delete a file.
+      
+      
+          copy source destination
+          Copy a file to another location.
+      
+      
+          xcopy source destination
+          Copy files and directories (can be recursive).
+      
+      
+          move source destination
+          Move or rename a file or directory.
+      
+      
+          ren oldname newname
+          Rename a file or directory.
+      
+      
+          type filename
+          Display the contents of a file.
+      
+      
+          more filename
+          Display a file one screen at a time.
+      
+      
+          cls
+          Clear the screen.
+      
+  
+
+Permissions and Ownership (CMD &amp; PowerShell)
+
+  
+      
+          Command
+          Description
+      
+  
+  
+      
+          icacls filename
+          Display or modify file permissions.
+      
+      
+          icacls filename /grant user:F
+          Grant full control permission to a user for a file.
+      
+      
+          takeown /f filename
+          Take ownership of a file.
+      
+      
+          attrib &#43;r filename
+          Make a file read-only.
+      
+      
+          attrib -r filename
+          Remove the read-only attribute from a file.
+      
+  
+
+Search and Find (CMD &amp; PowerShell)
+
+  
+      
+          Command
+          Description
+      
+  
+  
+      
+          find &quot;text&quot; filename
+          Search for a string in a file (CMD).
+      
+      
+          Select-String -Pattern &quot;text&quot; -Path filename
+          Search for a string in a file (PowerShell).
+      
+      
+          dir /s filename
+          Search for a file in the current directory and subdirectories (CMD).
+      
+      
+          Get-ChildItem -Recurse -Filter &quot;filename&quot;
+          Search for a file recursively (PowerShell).
+      
+  
+
+File Archiving and Compression (CMD &amp; PowerShell)
+
+  
+      
+          Command (CMD/PowerShell)
+          Description
+      
+  
+  
+      
+          compact /c filename
+          Compress a file (NTFS compression).
+      
+      
+          compact /u filename
+          Uncompress a file.
+      
+      
+          tar -cvf archive.tar file1 file2
+          Create a tarball (PowerShell).
+      
+      
+          tar -xvf archive.tar
+          Extract a tarball (PowerShell).
+      
+  
+
+Disk and Directory Usage (CMD &amp; PowerShell)
+
+  
+      
+          Command
+          Description
+      
+  
+  
+      
+          dir
+          List files and directories.
+      
+      
+          dir /a
+          Show hidden and system files.
+      
+      
+          tree
+          Display a directory tree structure.
+      
+      
+          fsutil volume diskfree C:
+          Display disk space information for drive C:.
+      
+      
+          Get-PSDrive (PowerShell)
+          Display available drives and their usage.
+      
+  
+
+Process Management (CMD &amp; PowerShell)
+
+  
+      
+          Command
+          Description
+      
+  
+  
+      
+          tasklist
+          List all running processes (CMD).
+      
+      
+          Stop-Process -Name processname
+          Terminate a process by name (PowerShell).
+      
+      
+          taskkill /PID pid
+          Kill a process by PID (CMD).
+      
+      
+          taskkill /IM processname /F
+          Force kill a process by name (CMD).
+      
+      
+          Get-Process (PowerShell)
+          List all running processes (PowerShell).
+      
+  
+
+Networking (CMD &amp; PowerShell)
+
+  
+      
+          Command
+          Description
+      
+  
+  
+      
+          ipconfig
+          Display network interface information and IP addresses.
+      
+      
+          ping hostname
+          Send ICMP echo requests to check network connectivity.
+      
+      
+          tracert hostname
+          Trace the route packets take to a network host (CMD).
+      
+      
+          Test-Connection hostname
+          Trace the route packets take (PowerShell equivalent).
+      
+      
+          nslookup domain
+          Query DNS information for a domain.
+      
+      
+          netstat -an
+          Show network connections, listening ports, and status.
+      
+  
+
+User and Group Management (CMD &amp; PowerShell)
+
+  
+      
+          Command
+          Description
+      
+  
+  
+      
+          net user
+          List all users.
+      
+      
+          net user username
+          Display information about a user.
+      
+      
+          net user username password /add
+          Create a new user with a password.
+      
+      
+          net localgroup groupname
+          List all members of a group.
+      
+      
+          net localgroup groupname username /add
+          Add a user to a group.
+      
+      
+          net localgroup groupname username /delete
+          Remove a user from a group.
+      
+  
+
+Text Editing and Viewing (CMD &amp; PowerShell)
+
+  
+      
+          Command
+          Description
+      
+  
+  
+      
+          notepad filename
+          Open a file in Notepad.
+      
+      
+          echo text &gt; filename
+          Write text to a file (overwrite).
+      
+      
+          echo text &gt;&gt; filename
+          Append text to a file.
+      
+      
+          type filename
+          Display the contents of a file (CMD).
+      
+      
+          gc filename or Get-Content filename
+          Display the contents of a file (PowerShell).
+      
+  
+
+System Information (CMD &amp; PowerShell)
+
+  
+      
+          Command
+          Description
+      
+  
+  
+      
+          systeminfo
+          Display detailed system information.
+      
+      
+          hostname
+          Display the computer&rsquo;s hostname.
+      
+      
+          ver
+          Display the Windows version.
+      
+      
+          wmic os get caption
+          Display the operating system version.
+      
+      
+          Get-ComputerInfo (PowerShell)
+          Display detailed system information (PowerShell).
+      
+      
+          whoami
+          Show the current logged-in user.
+      
+  
+
+Task Scheduling and Services (CMD &amp; PowerShell)
+
+  
+      
+          Command
+          Description
+      
+  
+  
+      
+          schtasks /query
+          List scheduled tasks.
+      
+      
+          schtasks /create
+          Create a new scheduled task.
+      
+      
+          net start servicename
+          Start a service.
+      
+      
+          net stop servicename
+          Stop a service.
+      
+      
+          Get-Service (PowerShell)
+          List all services.
+      
+  
+
+Package Management (PowerShell)
+
+  
+      
+          Command
+          Description
+      
+  
+  
+      
+          Install-Package
+          Install a package (requires PackageManagement module).
+      
+      
+          Get-Package
+          List installed packages.
+      
+      
+          Uninstall-Package
+          Uninstall a package.
+      
+  
+
+Other Useful Commands
+
+  
+      
+          Command
+          Description
+      
+  
+  
+      
+          cls
+          Clear the screen.
+      
+      
+          exit
+          Exit the command prompt or PowerShell session.
+      
+      
+          shutdown /s /t 0
+          Shutdown the computer.
+      
+      
+          shutdown /r /t 0
+          Restart the computer.
+      
+  
+
+Navigation and Help (CMD &amp; PowerShell)
+
+  
+      
+          Command
+          Description
+      
+  
+  
+      
+          help or command /?
+          Display help for a command.
+      
+      
+          Get-Help cmdlet (PowerShell)
+          Get help for a PowerShell cmdlet.
+      
+      
+          Get-Command (PowerShell)
+          List available commands in PowerShell.
+      
+  
+">
+    <meta name="generator" content="Hugo 0.135.0">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="https://example.org/i.t-operations/cmd-&#43;-powershell-cheatsheet/">
+    
+
+    <meta property="og:url" content="https://example.org/i.t-operations/cmd-&#43;-powershell-cheatsheet/">
+  <meta property="og:site_name" content="My New Hugo Site">
+  <meta property="og:title" content="My New Hugo Site">
+  <meta property="og:description" content="File and Directory Navigation (CMD &amp; PowerShell) Command (CMD/PowerShell) Description cd Display the current directory or change the directory. cd \path\to\directory Change to a specified directory. cd .. Move up one directory level. dir List files and directories in the current directory. ls (PowerShell) List files and directories in the current directory. pwd (PowerShell) Print working directory (current location). File and Directory Operations (CMD &amp; PowerShell) Command Description md dirname or mkdir dirname Create a new directory. rd dirname or rmdir dirname Remove an empty directory. del filename or rm filename Delete a file. copy source destination Copy a file to another location. xcopy source destination Copy files and directories (can be recursive). move source destination Move or rename a file or directory. ren oldname newname Rename a file or directory. type filename Display the contents of a file. more filename Display a file one screen at a time. cls Clear the screen. Permissions and Ownership (CMD &amp; PowerShell) Command Description icacls filename Display or modify file permissions. icacls filename /grant user:F Grant full control permission to a user for a file. takeown /f filename Take ownership of a file. attrib &#43;r filename Make a file read-only. attrib -r filename Remove the read-only attribute from a file. Search and Find (CMD &amp; PowerShell) Command Description find &#34;text&#34; filename Search for a string in a file (CMD). Select-String -Pattern &#34;text&#34; -Path filename Search for a string in a file (PowerShell). dir /s filename Search for a file in the current directory and subdirectories (CMD). Get-ChildItem -Recurse -Filter &#34;filename&#34; Search for a file recursively (PowerShell). File Archiving and Compression (CMD &amp; PowerShell) Command (CMD/PowerShell) Description compact /c filename Compress a file (NTFS compression). compact /u filename Uncompress a file. tar -cvf archive.tar file1 file2 Create a tarball (PowerShell). tar -xvf archive.tar Extract a tarball (PowerShell). Disk and Directory Usage (CMD &amp; PowerShell) Command Description dir List files and directories. dir /a Show hidden and system files. tree Display a directory tree structure. fsutil volume diskfree C: Display disk space information for drive C:. Get-PSDrive (PowerShell) Display available drives and their usage. Process Management (CMD &amp; PowerShell) Command Description tasklist List all running processes (CMD). Stop-Process -Name processname Terminate a process by name (PowerShell). taskkill /PID pid Kill a process by PID (CMD). taskkill /IM processname /F Force kill a process by name (CMD). Get-Process (PowerShell) List all running processes (PowerShell). Networking (CMD &amp; PowerShell) Command Description ipconfig Display network interface information and IP addresses. ping hostname Send ICMP echo requests to check network connectivity. tracert hostname Trace the route packets take to a network host (CMD). Test-Connection hostname Trace the route packets take (PowerShell equivalent). nslookup domain Query DNS information for a domain. netstat -an Show network connections, listening ports, and status. User and Group Management (CMD &amp; PowerShell) Command Description net user List all users. net user username Display information about a user. net user username password /add Create a new user with a password. net localgroup groupname List all members of a group. net localgroup groupname username /add Add a user to a group. net localgroup groupname username /delete Remove a user from a group. Text Editing and Viewing (CMD &amp; PowerShell) Command Description notepad filename Open a file in Notepad. echo text &gt; filename Write text to a file (overwrite). echo text &gt;&gt; filename Append text to a file. type filename Display the contents of a file (CMD). gc filename or Get-Content filename Display the contents of a file (PowerShell). System Information (CMD &amp; PowerShell) Command Description systeminfo Display detailed system information. hostname Display the computer’s hostname. ver Display the Windows version. wmic os get caption Display the operating system version. Get-ComputerInfo (PowerShell) Display detailed system information (PowerShell). whoami Show the current logged-in user. Task Scheduling and Services (CMD &amp; PowerShell) Command Description schtasks /query List scheduled tasks. schtasks /create Create a new scheduled task. net start servicename Start a service. net stop servicename Stop a service. Get-Service (PowerShell) List all services. Package Management (PowerShell) Command Description Install-Package Install a package (requires PackageManagement module). Get-Package List installed packages. Uninstall-Package Uninstall a package. Other Useful Commands Command Description cls Clear the screen. exit Exit the command prompt or PowerShell session. shutdown /s /t 0 Shutdown the computer. shutdown /r /t 0 Restart the computer. Navigation and Help (CMD &amp; PowerShell) Command Description help or command /? Display help for a command. Get-Help cmdlet (PowerShell) Get help for a PowerShell cmdlet. Get-Command (PowerShell) List available commands in PowerShell. ">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="i.t-operations">
+
+  <meta itemprop="name" content="My New Hugo Site">
+  <meta itemprop="description" content="File and Directory Navigation (CMD &amp; PowerShell) Command (CMD/PowerShell) Description cd Display the current directory or change the directory. cd \path\to\directory Change to a specified directory. cd .. Move up one directory level. dir List files and directories in the current directory. ls (PowerShell) List files and directories in the current directory. pwd (PowerShell) Print working directory (current location). File and Directory Operations (CMD &amp; PowerShell) Command Description md dirname or mkdir dirname Create a new directory. rd dirname or rmdir dirname Remove an empty directory. del filename or rm filename Delete a file. copy source destination Copy a file to another location. xcopy source destination Copy files and directories (can be recursive). move source destination Move or rename a file or directory. ren oldname newname Rename a file or directory. type filename Display the contents of a file. more filename Display a file one screen at a time. cls Clear the screen. Permissions and Ownership (CMD &amp; PowerShell) Command Description icacls filename Display or modify file permissions. icacls filename /grant user:F Grant full control permission to a user for a file. takeown /f filename Take ownership of a file. attrib &#43;r filename Make a file read-only. attrib -r filename Remove the read-only attribute from a file. Search and Find (CMD &amp; PowerShell) Command Description find &#34;text&#34; filename Search for a string in a file (CMD). Select-String -Pattern &#34;text&#34; -Path filename Search for a string in a file (PowerShell). dir /s filename Search for a file in the current directory and subdirectories (CMD). Get-ChildItem -Recurse -Filter &#34;filename&#34; Search for a file recursively (PowerShell). File Archiving and Compression (CMD &amp; PowerShell) Command (CMD/PowerShell) Description compact /c filename Compress a file (NTFS compression). compact /u filename Uncompress a file. tar -cvf archive.tar file1 file2 Create a tarball (PowerShell). tar -xvf archive.tar Extract a tarball (PowerShell). Disk and Directory Usage (CMD &amp; PowerShell) Command Description dir List files and directories. dir /a Show hidden and system files. tree Display a directory tree structure. fsutil volume diskfree C: Display disk space information for drive C:. Get-PSDrive (PowerShell) Display available drives and their usage. Process Management (CMD &amp; PowerShell) Command Description tasklist List all running processes (CMD). Stop-Process -Name processname Terminate a process by name (PowerShell). taskkill /PID pid Kill a process by PID (CMD). taskkill /IM processname /F Force kill a process by name (CMD). Get-Process (PowerShell) List all running processes (PowerShell). Networking (CMD &amp; PowerShell) Command Description ipconfig Display network interface information and IP addresses. ping hostname Send ICMP echo requests to check network connectivity. tracert hostname Trace the route packets take to a network host (CMD). Test-Connection hostname Trace the route packets take (PowerShell equivalent). nslookup domain Query DNS information for a domain. netstat -an Show network connections, listening ports, and status. User and Group Management (CMD &amp; PowerShell) Command Description net user List all users. net user username Display information about a user. net user username password /add Create a new user with a password. net localgroup groupname List all members of a group. net localgroup groupname username /add Add a user to a group. net localgroup groupname username /delete Remove a user from a group. Text Editing and Viewing (CMD &amp; PowerShell) Command Description notepad filename Open a file in Notepad. echo text &gt; filename Write text to a file (overwrite). echo text &gt;&gt; filename Append text to a file. type filename Display the contents of a file (CMD). gc filename or Get-Content filename Display the contents of a file (PowerShell). System Information (CMD &amp; PowerShell) Command Description systeminfo Display detailed system information. hostname Display the computer’s hostname. ver Display the Windows version. wmic os get caption Display the operating system version. Get-ComputerInfo (PowerShell) Display detailed system information (PowerShell). whoami Show the current logged-in user. Task Scheduling and Services (CMD &amp; PowerShell) Command Description schtasks /query List scheduled tasks. schtasks /create Create a new scheduled task. net start servicename Start a service. net stop servicename Stop a service. Get-Service (PowerShell) List all services. Package Management (PowerShell) Command Description Install-Package Install a package (requires PackageManagement module). Get-Package List installed packages. Uninstall-Package Uninstall a package. Other Useful Commands Command Description cls Clear the screen. exit Exit the command prompt or PowerShell session. shutdown /s /t 0 Shutdown the computer. shutdown /r /t 0 Restart the computer. Navigation and Help (CMD &amp; PowerShell) Command Description help or command /? Display help for a command. Get-Help cmdlet (PowerShell) Get help for a PowerShell cmdlet. Get-Command (PowerShell) List available commands in PowerShell. ">
+  <meta itemprop="wordCount" content="747">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="My New Hugo Site">
+  <meta name="twitter:description" content="File and Directory Navigation (CMD &amp; PowerShell) Command (CMD/PowerShell) Description cd Display the current directory or change the directory. cd \path\to\directory Change to a specified directory. cd .. Move up one directory level. dir List files and directories in the current directory. ls (PowerShell) List files and directories in the current directory. pwd (PowerShell) Print working directory (current location). File and Directory Operations (CMD &amp; PowerShell) Command Description md dirname or mkdir dirname Create a new directory. rd dirname or rmdir dirname Remove an empty directory. del filename or rm filename Delete a file. copy source destination Copy a file to another location. xcopy source destination Copy files and directories (can be recursive). move source destination Move or rename a file or directory. ren oldname newname Rename a file or directory. type filename Display the contents of a file. more filename Display a file one screen at a time. cls Clear the screen. Permissions and Ownership (CMD &amp; PowerShell) Command Description icacls filename Display or modify file permissions. icacls filename /grant user:F Grant full control permission to a user for a file. takeown /f filename Take ownership of a file. attrib &#43;r filename Make a file read-only. attrib -r filename Remove the read-only attribute from a file. Search and Find (CMD &amp; PowerShell) Command Description find &#34;text&#34; filename Search for a string in a file (CMD). Select-String -Pattern &#34;text&#34; -Path filename Search for a string in a file (PowerShell). dir /s filename Search for a file in the current directory and subdirectories (CMD). Get-ChildItem -Recurse -Filter &#34;filename&#34; Search for a file recursively (PowerShell). File Archiving and Compression (CMD &amp; PowerShell) Command (CMD/PowerShell) Description compact /c filename Compress a file (NTFS compression). compact /u filename Uncompress a file. tar -cvf archive.tar file1 file2 Create a tarball (PowerShell). tar -xvf archive.tar Extract a tarball (PowerShell). Disk and Directory Usage (CMD &amp; PowerShell) Command Description dir List files and directories. dir /a Show hidden and system files. tree Display a directory tree structure. fsutil volume diskfree C: Display disk space information for drive C:. Get-PSDrive (PowerShell) Display available drives and their usage. Process Management (CMD &amp; PowerShell) Command Description tasklist List all running processes (CMD). Stop-Process -Name processname Terminate a process by name (PowerShell). taskkill /PID pid Kill a process by PID (CMD). taskkill /IM processname /F Force kill a process by name (CMD). Get-Process (PowerShell) List all running processes (PowerShell). Networking (CMD &amp; PowerShell) Command Description ipconfig Display network interface information and IP addresses. ping hostname Send ICMP echo requests to check network connectivity. tracert hostname Trace the route packets take to a network host (CMD). Test-Connection hostname Trace the route packets take (PowerShell equivalent). nslookup domain Query DNS information for a domain. netstat -an Show network connections, listening ports, and status. User and Group Management (CMD &amp; PowerShell) Command Description net user List all users. net user username Display information about a user. net user username password /add Create a new user with a password. net localgroup groupname List all members of a group. net localgroup groupname username /add Add a user to a group. net localgroup groupname username /delete Remove a user from a group. Text Editing and Viewing (CMD &amp; PowerShell) Command Description notepad filename Open a file in Notepad. echo text &gt; filename Write text to a file (overwrite). echo text &gt;&gt; filename Append text to a file. type filename Display the contents of a file (CMD). gc filename or Get-Content filename Display the contents of a file (PowerShell). System Information (CMD &amp; PowerShell) Command Description systeminfo Display detailed system information. hostname Display the computer’s hostname. ver Display the Windows version. wmic os get caption Display the operating system version. Get-ComputerInfo (PowerShell) Display detailed system information (PowerShell). whoami Show the current logged-in user. Task Scheduling and Services (CMD &amp; PowerShell) Command Description schtasks /query List scheduled tasks. schtasks /create Create a new scheduled task. net start servicename Start a service. net stop servicename Stop a service. Get-Service (PowerShell) List all services. Package Management (PowerShell) Command Description Install-Package Install a package (requires PackageManagement module). Get-Package List installed packages. Uninstall-Package Uninstall a package. Other Useful Commands Command Description cls Clear the screen. exit Exit the command prompt or PowerShell session. shutdown /s /t 0 Shutdown the computer. shutdown /r /t 0 Restart the computer. Navigation and Help (CMD &amp; PowerShell) Command Description help or command /? Display help for a command. Get-Help cmdlet (PowerShell) Get help for a PowerShell cmdlet. Get-Command (PowerShell) List available commands in PowerShell. ">
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        My New Hugo Site
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        I.T Operations
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1"></h1>
+      
+      
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h3 id="file-and-directory-navigation-cmd--powershell"><strong>File and Directory Navigation (CMD &amp; PowerShell)</strong></h3>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Command (CMD/PowerShell)</th>
+          <th style="text-align: left">Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>cd</code></td>
+          <td style="text-align: left">Display the current directory or change the directory.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>cd \path\to\directory</code></td>
+          <td style="text-align: left">Change to a specified directory.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>cd ..</code></td>
+          <td style="text-align: left">Move up one directory level.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>dir</code></td>
+          <td style="text-align: left">List files and directories in the current directory.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>ls</code> (PowerShell)</td>
+          <td style="text-align: left">List files and directories in the current directory.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>pwd</code> (PowerShell)</td>
+          <td style="text-align: left">Print working directory (current location).</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="file-and-directory-operations-cmd--powershell"><strong>File and Directory Operations (CMD &amp; PowerShell)</strong></h3>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Command</th>
+          <th style="text-align: left">Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>md dirname</code> or <code>mkdir dirname</code></td>
+          <td style="text-align: left">Create a new directory.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>rd dirname</code> or <code>rmdir dirname</code></td>
+          <td style="text-align: left">Remove an empty directory.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>del filename</code> or <code>rm filename</code></td>
+          <td style="text-align: left">Delete a file.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>copy source destination</code></td>
+          <td style="text-align: left">Copy a file to another location.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>xcopy source destination</code></td>
+          <td style="text-align: left">Copy files and directories (can be recursive).</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>move source destination</code></td>
+          <td style="text-align: left">Move or rename a file or directory.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>ren oldname newname</code></td>
+          <td style="text-align: left">Rename a file or directory.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>type filename</code></td>
+          <td style="text-align: left">Display the contents of a file.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>more filename</code></td>
+          <td style="text-align: left">Display a file one screen at a time.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>cls</code></td>
+          <td style="text-align: left">Clear the screen.</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="permissions-and-ownership-cmd--powershell"><strong>Permissions and Ownership (CMD &amp; PowerShell)</strong></h3>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Command</th>
+          <th style="text-align: left">Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>icacls filename</code></td>
+          <td style="text-align: left">Display or modify file permissions.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>icacls filename /grant user:F</code></td>
+          <td style="text-align: left">Grant full control permission to a user for a file.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>takeown /f filename</code></td>
+          <td style="text-align: left">Take ownership of a file.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>attrib +r filename</code></td>
+          <td style="text-align: left">Make a file read-only.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>attrib -r filename</code></td>
+          <td style="text-align: left">Remove the read-only attribute from a file.</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="search-and-find-cmd--powershell"><strong>Search and Find (CMD &amp; PowerShell)</strong></h3>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Command</th>
+          <th style="text-align: left">Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>find &quot;text&quot; filename</code></td>
+          <td style="text-align: left">Search for a string in a file (CMD).</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>Select-String -Pattern &quot;text&quot; -Path filename</code></td>
+          <td style="text-align: left">Search for a string in a file (PowerShell).</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>dir /s filename</code></td>
+          <td style="text-align: left">Search for a file in the current directory and subdirectories (CMD).</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>Get-ChildItem -Recurse -Filter &quot;filename&quot;</code></td>
+          <td style="text-align: left">Search for a file recursively (PowerShell).</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="file-archiving-and-compression-cmd--powershell"><strong>File Archiving and Compression (CMD &amp; PowerShell)</strong></h3>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Command (CMD/PowerShell)</th>
+          <th style="text-align: left">Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>compact /c filename</code></td>
+          <td style="text-align: left">Compress a file (NTFS compression).</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>compact /u filename</code></td>
+          <td style="text-align: left">Uncompress a file.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>tar -cvf archive.tar file1 file2</code></td>
+          <td style="text-align: left">Create a tarball (PowerShell).</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>tar -xvf archive.tar</code></td>
+          <td style="text-align: left">Extract a tarball (PowerShell).</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="disk-and-directory-usage-cmd--powershell"><strong>Disk and Directory Usage (CMD &amp; PowerShell)</strong></h3>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Command</th>
+          <th style="text-align: left">Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>dir</code></td>
+          <td style="text-align: left">List files and directories.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>dir /a</code></td>
+          <td style="text-align: left">Show hidden and system files.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>tree</code></td>
+          <td style="text-align: left">Display a directory tree structure.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>fsutil volume diskfree C:</code></td>
+          <td style="text-align: left">Display disk space information for drive C:.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>Get-PSDrive</code> (PowerShell)</td>
+          <td style="text-align: left">Display available drives and their usage.</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="process-management-cmd--powershell"><strong>Process Management (CMD &amp; PowerShell)</strong></h3>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Command</th>
+          <th style="text-align: left">Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>tasklist</code></td>
+          <td style="text-align: left">List all running processes (CMD).</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>Stop-Process -Name processname</code></td>
+          <td style="text-align: left">Terminate a process by name (PowerShell).</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>taskkill /PID pid</code></td>
+          <td style="text-align: left">Kill a process by PID (CMD).</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>taskkill /IM processname /F</code></td>
+          <td style="text-align: left">Force kill a process by name (CMD).</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>Get-Process</code> (PowerShell)</td>
+          <td style="text-align: left">List all running processes (PowerShell).</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="networking-cmd--powershell"><strong>Networking (CMD &amp; PowerShell)</strong></h3>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Command</th>
+          <th style="text-align: left">Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>ipconfig</code></td>
+          <td style="text-align: left">Display network interface information and IP addresses.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>ping hostname</code></td>
+          <td style="text-align: left">Send ICMP echo requests to check network connectivity.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>tracert hostname</code></td>
+          <td style="text-align: left">Trace the route packets take to a network host (CMD).</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>Test-Connection hostname</code></td>
+          <td style="text-align: left">Trace the route packets take (PowerShell equivalent).</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>nslookup domain</code></td>
+          <td style="text-align: left">Query DNS information for a domain.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>netstat -an</code></td>
+          <td style="text-align: left">Show network connections, listening ports, and status.</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="user-and-group-management-cmd--powershell"><strong>User and Group Management (CMD &amp; PowerShell)</strong></h3>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Command</th>
+          <th style="text-align: left">Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>net user</code></td>
+          <td style="text-align: left">List all users.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>net user username</code></td>
+          <td style="text-align: left">Display information about a user.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>net user username password /add</code></td>
+          <td style="text-align: left">Create a new user with a password.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>net localgroup groupname</code></td>
+          <td style="text-align: left">List all members of a group.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>net localgroup groupname username /add</code></td>
+          <td style="text-align: left">Add a user to a group.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>net localgroup groupname username /delete</code></td>
+          <td style="text-align: left">Remove a user from a group.</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="text-editing-and-viewing-cmd--powershell"><strong>Text Editing and Viewing (CMD &amp; PowerShell)</strong></h3>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Command</th>
+          <th style="text-align: left">Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>notepad filename</code></td>
+          <td style="text-align: left">Open a file in Notepad.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>echo text &gt; filename</code></td>
+          <td style="text-align: left">Write text to a file (overwrite).</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>echo text &gt;&gt; filename</code></td>
+          <td style="text-align: left">Append text to a file.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>type filename</code></td>
+          <td style="text-align: left">Display the contents of a file (CMD).</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>gc filename</code> or <code>Get-Content filename</code></td>
+          <td style="text-align: left">Display the contents of a file (PowerShell).</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="system-information-cmd--powershell"><strong>System Information (CMD &amp; PowerShell)</strong></h3>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Command</th>
+          <th style="text-align: left">Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>systeminfo</code></td>
+          <td style="text-align: left">Display detailed system information.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>hostname</code></td>
+          <td style="text-align: left">Display the computer&rsquo;s hostname.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>ver</code></td>
+          <td style="text-align: left">Display the Windows version.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>wmic os get caption</code></td>
+          <td style="text-align: left">Display the operating system version.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>Get-ComputerInfo</code> (PowerShell)</td>
+          <td style="text-align: left">Display detailed system information (PowerShell).</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>whoami</code></td>
+          <td style="text-align: left">Show the current logged-in user.</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="task-scheduling-and-services-cmd--powershell"><strong>Task Scheduling and Services (CMD &amp; PowerShell)</strong></h3>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Command</th>
+          <th style="text-align: left">Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>schtasks /query</code></td>
+          <td style="text-align: left">List scheduled tasks.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>schtasks /create</code></td>
+          <td style="text-align: left">Create a new scheduled task.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>net start servicename</code></td>
+          <td style="text-align: left">Start a service.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>net stop servicename</code></td>
+          <td style="text-align: left">Stop a service.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>Get-Service</code> (PowerShell)</td>
+          <td style="text-align: left">List all services.</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="package-management-powershell"><strong>Package Management (PowerShell)</strong></h3>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Command</th>
+          <th style="text-align: left">Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>Install-Package</code></td>
+          <td style="text-align: left">Install a package (requires <code>PackageManagement</code> module).</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>Get-Package</code></td>
+          <td style="text-align: left">List installed packages.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>Uninstall-Package</code></td>
+          <td style="text-align: left">Uninstall a package.</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="other-useful-commands"><strong>Other Useful Commands</strong></h3>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Command</th>
+          <th style="text-align: left">Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>cls</code></td>
+          <td style="text-align: left">Clear the screen.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>exit</code></td>
+          <td style="text-align: left">Exit the command prompt or PowerShell session.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>shutdown /s /t 0</code></td>
+          <td style="text-align: left">Shutdown the computer.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>shutdown /r /t 0</code></td>
+          <td style="text-align: left">Restart the computer.</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="navigation-and-help-cmd--powershell"><strong>Navigation and Help (CMD &amp; PowerShell)</strong></h3>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Command</th>
+          <th style="text-align: left">Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>help</code> or <code>command /?</code></td>
+          <td style="text-align: left">Display help for a command.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>Get-Help cmdlet</code> (PowerShell)</td>
+          <td style="text-align: left">Get help for a PowerShell cmdlet.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>Get-Command</code> (PowerShell)</td>
+          <td style="text-align: left">List available commands in PowerShell.</td>
+      </tr>
+  </tbody>
+</table>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://example.org/" >
+    &copy;  My New Hugo Site 2024 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

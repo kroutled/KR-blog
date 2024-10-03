@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>My New Hugo Site</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="Git Basics
+
+  
+      
+          Command
+          Description
+      
+  
+  
+      
+          git init
+          Initialize a new Git repository in your current directory.
+      
+      
+          git clone &lt;repo-url&gt;
+          Clone an existing repository from a URL.
+      
+      
+          git status
+          Show the current state of the working directory and staging area.
+      
+      
+          git add &lt;file&gt;
+          Stage a specific file for the next commit.
+      
+      
+          git add .
+          Stage all changes in the current directory.
+      
+      
+          git commit -m &quot;message&quot;
+          Commit staged changes with a message.
+      
+      
+          git log
+          View the commit history.
+      
+      
+          git log --oneline
+          View the commit history in a compact format.
+      
+      
+          git diff
+          Show changes between working directory and index/staging area.
+      
+      
+          git diff --staged
+          Show changes between staging area and last commit.
+      
+  
+
+Branching &amp; Merging
+
+  
+      
+          Command
+          Description
+      
+  
+  
+      
+          git branch
+          List all branches.
+      
+      
+          git branch &lt;branch-name&gt;
+          Create a new branch.
+      
+      
+          git checkout &lt;branch-name&gt;
+          Switch to a different branch.
+      
+      
+          git checkout -b &lt;branch-name&gt;
+          Create a new branch and switch to it.
+      
+      
+          git merge &lt;branch-name&gt;
+          Merge a branch into the current branch.
+      
+      
+          git branch -d &lt;branch-name&gt;
+          Delete a branch (only if fully merged).
+      
+      
+          git branch -D &lt;branch-name&gt;
+          Force delete a branch.
+      
+      
+          git stash
+          Save changes for later without committing.
+      
+      
+          git stash pop
+          Apply the most recent stash and remove it from the stash list.
+      
+      
+          git stash list
+          View saved stashes.
+      
+  
+
+Remote Repositories
+
+  
+      
+          Command
+          Description
+      
+  
+  
+      
+          git remote -v
+          View remote URLs linked to your repository.
+      
+      
+          git remote add origin &lt;url&gt;
+          Add a remote repository with the name origin.
+      
+      
+          git push -u origin &lt;branch-name&gt;
+          Push to a remote branch and set it as the upstream for future pushes.
+      
+      
+          git push origin &lt;branch-name&gt;
+          Push local changes to a remote repository.
+      
+      
+          git push --all origin
+          Push all branches to the remote repository.
+      
+      
+          git pull
+          Fetch and merge changes from the remote repository.
+      
+      
+          git fetch
+          Fetch changes from the remote repository (without merging).
+      
+  
+
+Undoing Changes
+
+  
+      
+          Command
+          Description
+      
+  
+  
+      
+          git reset &lt;file&gt;
+          Unstage a file (leave changes in working directory).
+      
+      
+          git reset --hard &lt;commit&gt;
+          Reset the working directory and index to a previous commit (dangerous!).
+      
+      
+          git checkout -- &lt;file&gt;
+          Discard changes in the working directory for a file.
+      
+      
+          git revert &lt;commit&gt;
+          Create a new commit that undoes changes from a specific commit.
+      
+      
+          git reset HEAD~1
+          Undo the last commit, keep changes in the working directory.
+      
+  
+
+Viewing and Comparing Changes
+
+  
+      
+          Command
+          Description
+      
+  
+  
+      
+          git show &lt;commit&gt;
+          Show the changes in a specific commit.
+      
+      
+          git diff &lt;branch-name&gt;
+          Show the differences between your working directory and a branch.
+      
+      
+          git log --graph --oneline --all
+          View the history of all branches in a compact graph.
+      
+  
+
+Tagging
+
+  
+      
+          Command
+          Description
+      
+  
+  
+      
+          git tag
+          List all tags in the repository.
+      
+      
+          git tag &lt;tag-name&gt;
+          Create a new tag at the current commit.
+      
+      
+          git tag -a &lt;tag-name&gt; -m &quot;message&quot;
+          Create an annotated tag with a message.
+      
+      
+          git push origin &lt;tag-name&gt;
+          Push a tag to the remote repository.
+      
+      
+          git push --tags
+          Push all tags to the remote repository.
+      
+  
+
+Configuration
+
+  
+      
+          Command
+          Description
+      
+  
+  
+      
+          git config --list
+          View all Git configuration settings.
+      
+      
+          git config user.name &quot;Your Name&quot;
+          Set your Git username.
+      
+      
+          git config user.email &quot;you@example.com&quot;
+          Set your Git email address.
+      
+      
+          git config --global user.name &quot;Your Name&quot;
+          Set your Git username globally for all repositories.
+      
+      
+          git config --global core.editor &quot;vim&quot;
+          Set the default text editor for Git globally.
+      
+  
+
+Working with Commits
+
+  
+      
+          Command
+          Description
+      
+  
+  
+      
+          git commit --amend
+          Amend the last commit (e.g., to fix the commit message).
+      
+      
+          git cherry-pick &lt;commit&gt;
+          Apply the changes from a specific commit on top of your current branch.
+      
+  
+
+Git Aliases (Optional, for Convenience)
+You can create aliases for frequently used commands:">
+    <meta name="generator" content="Hugo 0.135.0">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="https://example.org/i.t-operations/git-cheatsheet/">
+    
+
+    <meta property="og:url" content="https://example.org/i.t-operations/git-cheatsheet/">
+  <meta property="og:site_name" content="My New Hugo Site">
+  <meta property="og:title" content="My New Hugo Site">
+  <meta property="og:description" content="Git Basics Command Description git init Initialize a new Git repository in your current directory. git clone &lt;repo-url&gt; Clone an existing repository from a URL. git status Show the current state of the working directory and staging area. git add &lt;file&gt; Stage a specific file for the next commit. git add . Stage all changes in the current directory. git commit -m &#34;message&#34; Commit staged changes with a message. git log View the commit history. git log --oneline View the commit history in a compact format. git diff Show changes between working directory and index/staging area. git diff --staged Show changes between staging area and last commit. Branching &amp; Merging Command Description git branch List all branches. git branch &lt;branch-name&gt; Create a new branch. git checkout &lt;branch-name&gt; Switch to a different branch. git checkout -b &lt;branch-name&gt; Create a new branch and switch to it. git merge &lt;branch-name&gt; Merge a branch into the current branch. git branch -d &lt;branch-name&gt; Delete a branch (only if fully merged). git branch -D &lt;branch-name&gt; Force delete a branch. git stash Save changes for later without committing. git stash pop Apply the most recent stash and remove it from the stash list. git stash list View saved stashes. Remote Repositories Command Description git remote -v View remote URLs linked to your repository. git remote add origin &lt;url&gt; Add a remote repository with the name origin. git push -u origin &lt;branch-name&gt; Push to a remote branch and set it as the upstream for future pushes. git push origin &lt;branch-name&gt; Push local changes to a remote repository. git push --all origin Push all branches to the remote repository. git pull Fetch and merge changes from the remote repository. git fetch Fetch changes from the remote repository (without merging). Undoing Changes Command Description git reset &lt;file&gt; Unstage a file (leave changes in working directory). git reset --hard &lt;commit&gt; Reset the working directory and index to a previous commit (dangerous!). git checkout -- &lt;file&gt; Discard changes in the working directory for a file. git revert &lt;commit&gt; Create a new commit that undoes changes from a specific commit. git reset HEAD~1 Undo the last commit, keep changes in the working directory. Viewing and Comparing Changes Command Description git show &lt;commit&gt; Show the changes in a specific commit. git diff &lt;branch-name&gt; Show the differences between your working directory and a branch. git log --graph --oneline --all View the history of all branches in a compact graph. Tagging Command Description git tag List all tags in the repository. git tag &lt;tag-name&gt; Create a new tag at the current commit. git tag -a &lt;tag-name&gt; -m &#34;message&#34; Create an annotated tag with a message. git push origin &lt;tag-name&gt; Push a tag to the remote repository. git push --tags Push all tags to the remote repository. Configuration Command Description git config --list View all Git configuration settings. git config user.name &#34;Your Name&#34; Set your Git username. git config user.email &#34;you@example.com&#34; Set your Git email address. git config --global user.name &#34;Your Name&#34; Set your Git username globally for all repositories. git config --global core.editor &#34;vim&#34; Set the default text editor for Git globally. Working with Commits Command Description git commit --amend Amend the last commit (e.g., to fix the commit message). git cherry-pick &lt;commit&gt; Apply the changes from a specific commit on top of your current branch. Git Aliases (Optional, for Convenience) You can create aliases for frequently used commands:">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="i.t-operations">
+
+  <meta itemprop="name" content="My New Hugo Site">
+  <meta itemprop="description" content="Git Basics Command Description git init Initialize a new Git repository in your current directory. git clone &lt;repo-url&gt; Clone an existing repository from a URL. git status Show the current state of the working directory and staging area. git add &lt;file&gt; Stage a specific file for the next commit. git add . Stage all changes in the current directory. git commit -m &#34;message&#34; Commit staged changes with a message. git log View the commit history. git log --oneline View the commit history in a compact format. git diff Show changes between working directory and index/staging area. git diff --staged Show changes between staging area and last commit. Branching &amp; Merging Command Description git branch List all branches. git branch &lt;branch-name&gt; Create a new branch. git checkout &lt;branch-name&gt; Switch to a different branch. git checkout -b &lt;branch-name&gt; Create a new branch and switch to it. git merge &lt;branch-name&gt; Merge a branch into the current branch. git branch -d &lt;branch-name&gt; Delete a branch (only if fully merged). git branch -D &lt;branch-name&gt; Force delete a branch. git stash Save changes for later without committing. git stash pop Apply the most recent stash and remove it from the stash list. git stash list View saved stashes. Remote Repositories Command Description git remote -v View remote URLs linked to your repository. git remote add origin &lt;url&gt; Add a remote repository with the name origin. git push -u origin &lt;branch-name&gt; Push to a remote branch and set it as the upstream for future pushes. git push origin &lt;branch-name&gt; Push local changes to a remote repository. git push --all origin Push all branches to the remote repository. git pull Fetch and merge changes from the remote repository. git fetch Fetch changes from the remote repository (without merging). Undoing Changes Command Description git reset &lt;file&gt; Unstage a file (leave changes in working directory). git reset --hard &lt;commit&gt; Reset the working directory and index to a previous commit (dangerous!). git checkout -- &lt;file&gt; Discard changes in the working directory for a file. git revert &lt;commit&gt; Create a new commit that undoes changes from a specific commit. git reset HEAD~1 Undo the last commit, keep changes in the working directory. Viewing and Comparing Changes Command Description git show &lt;commit&gt; Show the changes in a specific commit. git diff &lt;branch-name&gt; Show the differences between your working directory and a branch. git log --graph --oneline --all View the history of all branches in a compact graph. Tagging Command Description git tag List all tags in the repository. git tag &lt;tag-name&gt; Create a new tag at the current commit. git tag -a &lt;tag-name&gt; -m &#34;message&#34; Create an annotated tag with a message. git push origin &lt;tag-name&gt; Push a tag to the remote repository. git push --tags Push all tags to the remote repository. Configuration Command Description git config --list View all Git configuration settings. git config user.name &#34;Your Name&#34; Set your Git username. git config user.email &#34;you@example.com&#34; Set your Git email address. git config --global user.name &#34;Your Name&#34; Set your Git username globally for all repositories. git config --global core.editor &#34;vim&#34; Set the default text editor for Git globally. Working with Commits Command Description git commit --amend Amend the last commit (e.g., to fix the commit message). git cherry-pick &lt;commit&gt; Apply the changes from a specific commit on top of your current branch. Git Aliases (Optional, for Convenience) You can create aliases for frequently used commands:">
+  <meta itemprop="wordCount" content="615">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="My New Hugo Site">
+  <meta name="twitter:description" content="Git Basics Command Description git init Initialize a new Git repository in your current directory. git clone &lt;repo-url&gt; Clone an existing repository from a URL. git status Show the current state of the working directory and staging area. git add &lt;file&gt; Stage a specific file for the next commit. git add . Stage all changes in the current directory. git commit -m &#34;message&#34; Commit staged changes with a message. git log View the commit history. git log --oneline View the commit history in a compact format. git diff Show changes between working directory and index/staging area. git diff --staged Show changes between staging area and last commit. Branching &amp; Merging Command Description git branch List all branches. git branch &lt;branch-name&gt; Create a new branch. git checkout &lt;branch-name&gt; Switch to a different branch. git checkout -b &lt;branch-name&gt; Create a new branch and switch to it. git merge &lt;branch-name&gt; Merge a branch into the current branch. git branch -d &lt;branch-name&gt; Delete a branch (only if fully merged). git branch -D &lt;branch-name&gt; Force delete a branch. git stash Save changes for later without committing. git stash pop Apply the most recent stash and remove it from the stash list. git stash list View saved stashes. Remote Repositories Command Description git remote -v View remote URLs linked to your repository. git remote add origin &lt;url&gt; Add a remote repository with the name origin. git push -u origin &lt;branch-name&gt; Push to a remote branch and set it as the upstream for future pushes. git push origin &lt;branch-name&gt; Push local changes to a remote repository. git push --all origin Push all branches to the remote repository. git pull Fetch and merge changes from the remote repository. git fetch Fetch changes from the remote repository (without merging). Undoing Changes Command Description git reset &lt;file&gt; Unstage a file (leave changes in working directory). git reset --hard &lt;commit&gt; Reset the working directory and index to a previous commit (dangerous!). git checkout -- &lt;file&gt; Discard changes in the working directory for a file. git revert &lt;commit&gt; Create a new commit that undoes changes from a specific commit. git reset HEAD~1 Undo the last commit, keep changes in the working directory. Viewing and Comparing Changes Command Description git show &lt;commit&gt; Show the changes in a specific commit. git diff &lt;branch-name&gt; Show the differences between your working directory and a branch. git log --graph --oneline --all View the history of all branches in a compact graph. Tagging Command Description git tag List all tags in the repository. git tag &lt;tag-name&gt; Create a new tag at the current commit. git tag -a &lt;tag-name&gt; -m &#34;message&#34; Create an annotated tag with a message. git push origin &lt;tag-name&gt; Push a tag to the remote repository. git push --tags Push all tags to the remote repository. Configuration Command Description git config --list View all Git configuration settings. git config user.name &#34;Your Name&#34; Set your Git username. git config user.email &#34;you@example.com&#34; Set your Git email address. git config --global user.name &#34;Your Name&#34; Set your Git username globally for all repositories. git config --global core.editor &#34;vim&#34; Set the default text editor for Git globally. Working with Commits Command Description git commit --amend Amend the last commit (e.g., to fix the commit message). git cherry-pick &lt;commit&gt; Apply the changes from a specific commit on top of your current branch. Git Aliases (Optional, for Convenience) You can create aliases for frequently used commands:">
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        My New Hugo Site
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        I.T Operations
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1"></h1>
+      
+      
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h3 id="git-basics"><strong>Git Basics</strong></h3>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Command</th>
+          <th style="text-align: left">Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>git init</code></td>
+          <td style="text-align: left">Initialize a new Git repository in your current directory.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>git clone &lt;repo-url&gt;</code></td>
+          <td style="text-align: left">Clone an existing repository from a URL.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>git status</code></td>
+          <td style="text-align: left">Show the current state of the working directory and staging area.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>git add &lt;file&gt;</code></td>
+          <td style="text-align: left">Stage a specific file for the next commit.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>git add .</code></td>
+          <td style="text-align: left">Stage all changes in the current directory.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>git commit -m &quot;message&quot;</code></td>
+          <td style="text-align: left">Commit staged changes with a message.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>git log</code></td>
+          <td style="text-align: left">View the commit history.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>git log --oneline</code></td>
+          <td style="text-align: left">View the commit history in a compact format.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>git diff</code></td>
+          <td style="text-align: left">Show changes between working directory and index/staging area.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>git diff --staged</code></td>
+          <td style="text-align: left">Show changes between staging area and last commit.</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="branching--merging"><strong>Branching &amp; Merging</strong></h3>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Command</th>
+          <th style="text-align: left">Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>git branch</code></td>
+          <td style="text-align: left">List all branches.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>git branch &lt;branch-name&gt;</code></td>
+          <td style="text-align: left">Create a new branch.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>git checkout &lt;branch-name&gt;</code></td>
+          <td style="text-align: left">Switch to a different branch.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>git checkout -b &lt;branch-name&gt;</code></td>
+          <td style="text-align: left">Create a new branch and switch to it.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>git merge &lt;branch-name&gt;</code></td>
+          <td style="text-align: left">Merge a branch into the current branch.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>git branch -d &lt;branch-name&gt;</code></td>
+          <td style="text-align: left">Delete a branch (only if fully merged).</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>git branch -D &lt;branch-name&gt;</code></td>
+          <td style="text-align: left">Force delete a branch.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>git stash</code></td>
+          <td style="text-align: left">Save changes for later without committing.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>git stash pop</code></td>
+          <td style="text-align: left">Apply the most recent stash and remove it from the stash list.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>git stash list</code></td>
+          <td style="text-align: left">View saved stashes.</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="remote-repositories"><strong>Remote Repositories</strong></h3>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Command</th>
+          <th style="text-align: left">Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>git remote -v</code></td>
+          <td style="text-align: left">View remote URLs linked to your repository.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>git remote add origin &lt;url&gt;</code></td>
+          <td style="text-align: left">Add a remote repository with the name <code>origin</code>.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>git push -u origin &lt;branch-name&gt;</code></td>
+          <td style="text-align: left">Push to a remote branch and set it as the upstream for future pushes.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>git push origin &lt;branch-name&gt;</code></td>
+          <td style="text-align: left">Push local changes to a remote repository.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>git push --all origin</code></td>
+          <td style="text-align: left">Push all branches to the remote repository.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>git pull</code></td>
+          <td style="text-align: left">Fetch and merge changes from the remote repository.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>git fetch</code></td>
+          <td style="text-align: left">Fetch changes from the remote repository (without merging).</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="undoing-changes"><strong>Undoing Changes</strong></h3>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Command</th>
+          <th style="text-align: left">Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>git reset &lt;file&gt;</code></td>
+          <td style="text-align: left">Unstage a file (leave changes in working directory).</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>git reset --hard &lt;commit&gt;</code></td>
+          <td style="text-align: left">Reset the working directory and index to a previous commit (dangerous!).</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>git checkout -- &lt;file&gt;</code></td>
+          <td style="text-align: left">Discard changes in the working directory for a file.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>git revert &lt;commit&gt;</code></td>
+          <td style="text-align: left">Create a new commit that undoes changes from a specific commit.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>git reset HEAD~1</code></td>
+          <td style="text-align: left">Undo the last commit, keep changes in the working directory.</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="viewing-and-comparing-changes"><strong>Viewing and Comparing Changes</strong></h3>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Command</th>
+          <th style="text-align: left">Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>git show &lt;commit&gt;</code></td>
+          <td style="text-align: left">Show the changes in a specific commit.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>git diff &lt;branch-name&gt;</code></td>
+          <td style="text-align: left">Show the differences between your working directory and a branch.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>git log --graph --oneline --all</code></td>
+          <td style="text-align: left">View the history of all branches in a compact graph.</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="tagging"><strong>Tagging</strong></h3>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Command</th>
+          <th style="text-align: left">Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>git tag</code></td>
+          <td style="text-align: left">List all tags in the repository.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>git tag &lt;tag-name&gt;</code></td>
+          <td style="text-align: left">Create a new tag at the current commit.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>git tag -a &lt;tag-name&gt; -m &quot;message&quot;</code></td>
+          <td style="text-align: left">Create an annotated tag with a message.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>git push origin &lt;tag-name&gt;</code></td>
+          <td style="text-align: left">Push a tag to the remote repository.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>git push --tags</code></td>
+          <td style="text-align: left">Push all tags to the remote repository.</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="configuration"><strong>Configuration</strong></h3>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Command</th>
+          <th style="text-align: left">Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>git config --list</code></td>
+          <td style="text-align: left">View all Git configuration settings.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>git config user.name &quot;Your Name&quot;</code></td>
+          <td style="text-align: left">Set your Git username.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>git config user.email &quot;you@example.com&quot;</code></td>
+          <td style="text-align: left">Set your Git email address.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>git config --global user.name &quot;Your Name&quot;</code></td>
+          <td style="text-align: left">Set your Git username globally for all repositories.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>git config --global core.editor &quot;vim&quot;</code></td>
+          <td style="text-align: left">Set the default text editor for Git globally.</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="working-with-commits"><strong>Working with Commits</strong></h3>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Command</th>
+          <th style="text-align: left">Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>git commit --amend</code></td>
+          <td style="text-align: left">Amend the last commit (e.g., to fix the commit message).</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>git cherry-pick &lt;commit&gt;</code></td>
+          <td style="text-align: left">Apply the changes from a specific commit on top of your current branch.</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="git-aliases-optional-for-convenience"><strong>Git Aliases (Optional, for Convenience)</strong></h3>
+<p>You can create aliases for frequently used commands:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git config --global alias.co checkout 
+</span></span><span style="display:flex;"><span>git config --global alias.br branch 
+</span></span><span style="display:flex;"><span>git config --global alias.cm commit 
+</span></span><span style="display:flex;"><span>git config --global alias.st status
+</span></span></code></pre></div><h3 id="git-rebase"><strong>Git Rebase</strong></h3>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Command</th>
+          <th style="text-align: left">Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>git rebase &lt;branch&gt;</code></td>
+          <td style="text-align: left">Rebase the current branch on top of another branch.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>git rebase --continue</code></td>
+          <td style="text-align: left">Continue the rebase after resolving conflicts.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>git rebase --abort</code></td>
+          <td style="text-align: left">Abort the rebase process.</td>
+      </tr>
+  </tbody>
+</table>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://example.org/" >
+    &copy;  My New Hugo Site 2024 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

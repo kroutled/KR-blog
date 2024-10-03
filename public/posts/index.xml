@@ -17,9 +17,9 @@
     </item>
     <item>
       <title>Second post</title>
-      <link>https://example.org/posts/my-second-post/</link>
+      <link>https://example.org/posts/folder1/my-second-post/</link>
       <pubDate>Thu, 03 Oct 2024 14:34:54 +0200</pubDate>
-      <guid>https://example.org/posts/my-second-post/</guid>
+      <guid>https://example.org/posts/folder1/my-second-post/</guid>
       <description>&lt;h1 id=&#34;coolio-seems-like-things-are-moving-forward-with-regards-to-this&#34;&gt;Coolio seems like things are moving forward with regards to this&amp;hellip;&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Why&lt;/li&gt;&#xA;&lt;li&gt;do&lt;/li&gt;&#xA;&lt;li&gt;i&lt;/li&gt;&#xA;&lt;li&gt;feel&lt;/li&gt;&#xA;&lt;li&gt;like&lt;/li&gt;&#xA;&lt;li&gt;this&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;code&gt;wowa weewa&lt;/code&gt;&lt;/p&gt;</description>
     </item>
   </channel>

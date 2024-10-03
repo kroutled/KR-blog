@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>My New Hugo Site</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="Overview
+This is an Azure Function App which is hosted on Azure. The Function App contains multiple timer based functions which are used to connect to the aNewSpring API, pull data and store that data in an Azure MSSQL Database.
+They currently pull data related to:
+
+Learners
+Templates, Courses, Activities
+Subscriptions
+Groups (Optional)
+
+This data is then processed and compared to the existing data in the Azure MSSQL database. If there is a mismatch of data, then data will be Created/Updated/Deleted accordingly.">
+    <meta name="generator" content="Hugo 0.135.0">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="http://localhost:1313/nlt/business-intelligence---reporting/t.i.s/tis-sync-function-setup/">
+    
+
+    <meta property="og:url" content="http://localhost:1313/nlt/business-intelligence---reporting/t.i.s/tis-sync-function-setup/">
+  <meta property="og:site_name" content="My New Hugo Site">
+  <meta property="og:title" content="My New Hugo Site">
+  <meta property="og:description" content="Overview This is an Azure Function App which is hosted on Azure. The Function App contains multiple timer based functions which are used to connect to the aNewSpring API, pull data and store that data in an Azure MSSQL Database.
+They currently pull data related to:
+Learners Templates, Courses, Activities Subscriptions Groups (Optional) This data is then processed and compared to the existing data in the Azure MSSQL database. If there is a mismatch of data, then data will be Created/Updated/Deleted accordingly.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="nlt">
+
+  <meta itemprop="name" content="My New Hugo Site">
+  <meta itemprop="description" content="Overview This is an Azure Function App which is hosted on Azure. The Function App contains multiple timer based functions which are used to connect to the aNewSpring API, pull data and store that data in an Azure MSSQL Database.
+They currently pull data related to:
+Learners Templates, Courses, Activities Subscriptions Groups (Optional) This data is then processed and compared to the existing data in the Azure MSSQL database. If there is a mismatch of data, then data will be Created/Updated/Deleted accordingly.">
+  <meta itemprop="wordCount" content="644">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="My New Hugo Site">
+  <meta name="twitter:description" content="Overview This is an Azure Function App which is hosted on Azure. The Function App contains multiple timer based functions which are used to connect to the aNewSpring API, pull data and store that data in an Azure MSSQL Database.
+They currently pull data related to:
+Learners Templates, Courses, Activities Subscriptions Groups (Optional) This data is then processed and compared to the existing data in the Azure MSSQL database. If there is a mismatch of data, then data will be Created/Updated/Deleted accordingly.">
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        My New Hugo Site
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        NLTs
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1"></h1>
+      
+      
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h1 id="overview">Overview</h1>
+<p>This is an Azure Function App which is hosted on Azure. The Function App contains multiple timer based functions which are used to connect to the aNewSpring API, pull data and store that data in an Azure MSSQL Database.</p>
+<p>They currently pull data related to:</p>
+<ol>
+<li>Learners</li>
+<li>Templates, Courses, Activities</li>
+<li>Subscriptions</li>
+<li>Groups (<em>Optional</em>)</li>
+</ol>
+<p>This data is then processed and compared to the existing data in the Azure MSSQL database. If there is a mismatch of data, then data will be Created/Updated/Deleted accordingly.</p>
+<hr>
+<h1 id="setup">Setup</h1>
+<h2 id="1-create-azure-function-app">1. Create Azure Function App</h2>
+<ol>
+<li>
+<p>To begin, navigate to the Function App service on <a href="https://portal.azure.com">https://portal.azure.com</a> (Log in using the Production credentials).
+This can be done by selecting the below icon or searching for Function App in the search bar.
+![[Pasted image 20240310093046.png|800]]</p>
+</li>
+<li>
+<p>Click the &lsquo;Create&rsquo; button
+![[Pasted image 20240310093407.png| 800]]</p>
+</li>
+<li>
+<p>Here we will fill in the relevant information. Generally we follow the naming convention of &lsquo;BI-{client name}-prod&rsquo; for name and use the RG-TISFUNCTIONS-PROD
+resource group. Make sure to select .NET and version 4.8 as the runtime and place the resource in the South African North Region. It is also important to select the
+Consumption plan to reduce costs.
+![[Pasted image 20240310095627.png|800]]</p>
+</li>
+<li>
+<p>On the Storage tab we can set the &lsquo;storageacctis&rsquo; account.<br>
+![[Pasted image 20240310100051.png|800]]</p>
+</li>
+<li>
+<p>Click &lsquo;Review + create&rsquo; button to create the Function App.</p>
+</li>
+<li>
+<p>Navigate to the resource, select the &lsquo;Change App Service plan&rsquo; tab under &lsquo;App Service Plan&rsquo; and set the destination plan to &lsquo;SouthAfricaNorthPlan&rsquo;.
+![[Pasted image 20240310100707.png|800]]</p>
+</li>
+</ol>
+<h3 id="11-configure-azure-function-app">1.1 Configure Azure Function App</h3>
+<p>In order for the function app to know which database and client API to connect with we need to configure some settings on the function app itself.</p>
+<p>The way that this Function App knows which aNewSpring environment it needs to connect to and sync data from is by connecting to the client&rsquo;s database on the Integration Server.
+It gets the encrypted API key from that client&rsquo;s Environment table, pulls it into the function and decrypts it using the Prefix given.</p>
+<p>Due to wanting to have a single code base for the synchronisation function, the configuration of the Prefix and Connection String is done on the Function App itself in Azure.
+We do this by creating two Environment Variables as seen below:
+![[Pasted image 20240403141914.png|1000]]</p>
+<blockquote>
+<p>[!Note]
+These variables must be named exactly as depicted above.
+The connection string can be obtained from the source code and should be updated to point to the new database that is created for the new client.
+The API Key can be retrieved from the aNewSpring environment under the settings tab.</p>
+</blockquote>
+<h2 id="2-retrieve-project-source-code">2. Retrieve project source code</h2>
+<ol>
+<li>Navigate to devops project: <a href="https://dev.azure.com/NewLeafDevelopment/_git/TIS_Sync_Function">https://dev.azure.com/NewLeafDevelopment/_git/TIS_Sync_Function</a>.</li>
+<li>Open Project in Visual Studio using .sln file.</li>
+<li>Add settings.local file:</li>
+</ol>
+<h2 id="3-local-testing">3. Local Testing</h2>
+<blockquote>
+<p>[! NOTE: ]
+This assumes the following:</p>
+<ol>
+<li>The Function App is configured with the correct connection strings and prefixes.</li>
+<li>The database is in place for the desired client.</li>
+</ol>
+</blockquote>
+<p>Once all is configured, we can now open the project source code within Visual Studio 2019. From here we will update the local.settings file and use the correct configuration variables(these are the same as the ones used to configure the Function App), this is so that we can test locally without having to deploy the functions to Azure.</p>
+<ul>
+<li>Copy code from Learners and paste into HTTP trigger function.</li>
+<li>Make Postman request.</li>
+<li>View database to see if data has been synchronised.</li>
+<li>Repeat for other functions.</li>
+<li>Order to run functions is generally as follows:
+<ul>
+<li>Learners.</li>
+<li>Courses.</li>
+<li>Subscriptions.</li>
+</ul>
+</li>
+</ul>
+<h2 id="4-deployment">4. Deployment</h2>
+<ol>
+<li>Make sure all required functions are not commented out.</li>
+<li>In Visual Studio code, right click on project name and select &lsquo;Publish&rsquo;.</li>
+<li>Login to <a href="mailto:production@newleaftech.co.za">production@newleaftech.co.za</a>.</li>
+<li>Select Resource Group.</li>
+<li>Select Function App created for that client.</li>
+<li>Click &lsquo;Publish&rsquo;</li>
+</ol>
+<blockquote>
+<p>[!Note]
+You will need to set the <code>SCM Basic Auth</code> option under Configuration-&gt;General Settings in order to successfully publish the function app.
+![[Pasted image 20240403141704.png|1000]]</p>
+</blockquote>
+<p>TODO:
+- Get screenshots from VS on windows machine</p>
+<p>[[TIS Database setup]]</p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://localhost:1313/" >
+    &copy;  My New Hugo Site 2024 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

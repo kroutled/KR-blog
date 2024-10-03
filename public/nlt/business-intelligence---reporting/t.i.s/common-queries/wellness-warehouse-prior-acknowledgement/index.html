@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>My New Hugo Site</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="Often times we will receive a query to add a prior acknowledgement for Wellness Warehouse. This is so that Learner&rsquo;s who have completed class room based Courses or Courses offered on aNewSpring but not completed on aNewSpring may be accounted for on the TIS.
+Generally these requests will come from Abby or NLT IT support as such: &ldquo;please give acknowledgement for Goqoayanda@wellness.co.za on this course CRSCUSEXPKZN&rdquo;.
+In order to complete this request we will need the email address of the Learner and the CourseExternalID.">
+    <meta name="generator" content="Hugo 0.135.0">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="http://localhost:1313/nlt/business-intelligence---reporting/t.i.s/common-queries/wellness-warehouse-prior-acknowledgement/">
+    
+
+    <meta property="og:url" content="http://localhost:1313/nlt/business-intelligence---reporting/t.i.s/common-queries/wellness-warehouse-prior-acknowledgement/">
+  <meta property="og:site_name" content="My New Hugo Site">
+  <meta property="og:title" content="My New Hugo Site">
+  <meta property="og:description" content="Often times we will receive a query to add a prior acknowledgement for Wellness Warehouse. This is so that Learner’s who have completed class room based Courses or Courses offered on aNewSpring but not completed on aNewSpring may be accounted for on the TIS.
+Generally these requests will come from Abby or NLT IT support as such: “please give acknowledgement for Goqoayanda@wellness.co.za on this course CRSCUSEXPKZN”. In order to complete this request we will need the email address of the Learner and the CourseExternalID.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="nlt">
+
+  <meta itemprop="name" content="My New Hugo Site">
+  <meta itemprop="description" content="Often times we will receive a query to add a prior acknowledgement for Wellness Warehouse. This is so that Learner’s who have completed class room based Courses or Courses offered on aNewSpring but not completed on aNewSpring may be accounted for on the TIS.
+Generally these requests will come from Abby or NLT IT support as such: “please give acknowledgement for Goqoayanda@wellness.co.za on this course CRSCUSEXPKZN”. In order to complete this request we will need the email address of the Learner and the CourseExternalID.">
+  <meta itemprop="wordCount" content="310">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="My New Hugo Site">
+  <meta name="twitter:description" content="Often times we will receive a query to add a prior acknowledgement for Wellness Warehouse. This is so that Learner’s who have completed class room based Courses or Courses offered on aNewSpring but not completed on aNewSpring may be accounted for on the TIS.
+Generally these requests will come from Abby or NLT IT support as such: “please give acknowledgement for Goqoayanda@wellness.co.za on this course CRSCUSEXPKZN”. In order to complete this request we will need the email address of the Learner and the CourseExternalID.">
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        My New Hugo Site
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        NLTs
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1"></h1>
+      
+      
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>Often times we will receive a query to add a prior acknowledgement for Wellness Warehouse. This is so that Learner&rsquo;s who have completed class room based Courses or Courses offered on aNewSpring but not completed on aNewSpring may be accounted for on the TIS.</p>
+<p>Generally these requests will come from Abby or NLT IT support as such: &ldquo;please give acknowledgement for <a href="mailto:Goqoayanda@wellness.co.za">Goqoayanda@wellness.co.za</a> on this course CRSCUSEXPKZN&rdquo;.
+In order to complete this request we will need the email address of the Learner and the CourseExternalID.</p>
+<p>On the WELLNESSWAREHOUSEDB database located here: sqls-wellness-prod.database.windows.net there is a table called [Subscription].[SubscriptionHistoric] where these records are stored.</p>
+<blockquote>
+<p>[!Note]
+We use a negative ID for these records to identify them on Power Bi</p>
+</blockquote>
+<p>The Insert_Historic_Data.sql script to account for all prior acknowledged records can be found here on the Google Drive:
+G:\Shared drives\IT\Clients\WellnessWarehouse\Training Intelligence\Database</p>
+<p>Otherwise the following process may be followed:</p>
+<ol>
+<li>Open the [Subscription].[SubscriptionHistoric] table and run the following to see the latest ID:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> [Subscription].[SubscriptionHistoric]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">order</span> <span style="color:#66d9ef">by</span> [SubscriptionId] <span style="color:#66d9ef">asc</span> 
+</span></span></code></pre></div><ol start="2">
+<li>Check the [Learner].[Learner] table to confirm the learner exists using their email/login:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> [Learner].[Learner]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> LearnerEmail <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Goqoayanda@wellness.co.za&#39;</span>
+</span></span></code></pre></div><ol start="3">
+<li>Check the [Course].[Course] table to confirm the course exists using the CourseExternalID:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> [Course].[Course]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> CourseExternalID <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;CRSCUSEXPKZN&#39;</span>
+</span></span></code></pre></div><ol start="4">
+<li>Once confirmed that both the learner and the course exist we can run the following to add the historic record:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> [Subscription].[SubscriptionHistoric] ( SubscriptionId,LearnerLogin,CourseExternalId) 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">VALUES</span> 
+</span></span><span style="display:flex;"><span>(<span style="color:#f92672">-</span><span style="color:#ae81ff">676</span>, <span style="color:#e6db74">&#39;Goqoayanda@wellness.co.za&#39;</span>, <span style="color:#e6db74">&#39;CRSCUSEXPKZN&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GO</span>
+</span></span></code></pre></div><ol start="5">
+<li>Finally we run the following to update all records in the [Subscription].[SubscriptionHistoric] table to have the static data used on the other columns:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">Update</span> [Subscription].[SubscriptionHistoric]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">set</span> SubscriptionActive        <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>, 
+</span></span><span style="display:flex;"><span>	SubscriptionCompleted     <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>,
+</span></span><span style="display:flex;"><span>	SubscriptionCompleteDate  <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;2023-09-1&#39;</span>,
+</span></span><span style="display:flex;"><span>	SubscriptionSubscribeDate <span style="color:#f92672">=</span><span style="color:#e6db74">&#39;2023-08-1&#39;</span>,
+</span></span><span style="display:flex;"><span>	SubscriptionStartDate     <span style="color:#f92672">=</span><span style="color:#e6db74">&#39;2023-08-1&#39;</span>,
+</span></span><span style="display:flex;"><span>	SubscriptionGradeDate     <span style="color:#f92672">=</span><span style="color:#e6db74">&#39;2023-09-1&#39;</span>,
+</span></span><span style="display:flex;"><span>	SubscriptionParts         <span style="color:#f92672">=</span><span style="color:#e6db74">&#39;[]&#39;</span>
+</span></span></code></pre></div><blockquote>
+<p>[!Note]
+It&rsquo;s important to append the code at step 4 to the Insert_Historic_Data.sql script and save the file, as this is our backup of all historic subscriptions added to the DB.</p>
+</blockquote>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://localhost:1313/" >
+    &copy;  My New Hugo Site 2024 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

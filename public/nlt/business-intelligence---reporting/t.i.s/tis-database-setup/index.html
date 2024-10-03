@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>My New Hugo Site</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="Overview
+The TIS database is a MSSQL database that we host on the Azure MSSQL server: ==sqls-nltintegration-prod.database.windows.net== unless otherwise required by the client.
+Clients that have their own MSSQL servers are:
+
+Wellness Warehouse
+Exxaro
+GIFs
+
+A general TIS database has the following tables in it:
+![[Pasted image 20240312095526.png|800]]
+In order to standardise the TIS system we generally create a .DACPAC file of an existing client DB. This DACPAC will contain the schemas, types and programmabilty of the existing database without any of the data in it.">
+    <meta name="generator" content="Hugo 0.135.0">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="http://localhost:1313/nlt/business-intelligence---reporting/t.i.s/tis-database-setup/">
+    
+
+    <meta property="og:url" content="http://localhost:1313/nlt/business-intelligence---reporting/t.i.s/tis-database-setup/">
+  <meta property="og:site_name" content="My New Hugo Site">
+  <meta property="og:title" content="My New Hugo Site">
+  <meta property="og:description" content="Overview The TIS database is a MSSQL database that we host on the Azure MSSQL server: ==sqls-nltintegration-prod.database.windows.net== unless otherwise required by the client. Clients that have their own MSSQL servers are:
+Wellness Warehouse Exxaro GIFs A general TIS database has the following tables in it: ![[Pasted image 20240312095526.png|800]]
+In order to standardise the TIS system we generally create a .DACPAC file of an existing client DB. This DACPAC will contain the schemas, types and programmabilty of the existing database without any of the data in it.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="nlt">
+
+  <meta itemprop="name" content="My New Hugo Site">
+  <meta itemprop="description" content="Overview The TIS database is a MSSQL database that we host on the Azure MSSQL server: ==sqls-nltintegration-prod.database.windows.net== unless otherwise required by the client. Clients that have their own MSSQL servers are:
+Wellness Warehouse Exxaro GIFs A general TIS database has the following tables in it: ![[Pasted image 20240312095526.png|800]]
+In order to standardise the TIS system we generally create a .DACPAC file of an existing client DB. This DACPAC will contain the schemas, types and programmabilty of the existing database without any of the data in it.">
+  <meta itemprop="wordCount" content="248">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="My New Hugo Site">
+  <meta name="twitter:description" content="Overview The TIS database is a MSSQL database that we host on the Azure MSSQL server: ==sqls-nltintegration-prod.database.windows.net== unless otherwise required by the client. Clients that have their own MSSQL servers are:
+Wellness Warehouse Exxaro GIFs A general TIS database has the following tables in it: ![[Pasted image 20240312095526.png|800]]
+In order to standardise the TIS system we generally create a .DACPAC file of an existing client DB. This DACPAC will contain the schemas, types and programmabilty of the existing database without any of the data in it.">
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        My New Hugo Site
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        NLTs
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1"></h1>
+      
+      
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h1 id="overview">Overview</h1>
+<p>The TIS database is a MSSQL database that we host on the Azure MSSQL server: ==sqls-nltintegration-prod.database.windows.net== unless otherwise required by the client.
+Clients that have their own MSSQL servers are:</p>
+<ul>
+<li>Wellness Warehouse</li>
+<li>Exxaro</li>
+<li>GIFs</li>
+</ul>
+<p>A general TIS database has the following tables in it:
+![[Pasted image 20240312095526.png|800]]</p>
+<p>In order to standardise the TIS system we generally create a .DACPAC file of an existing client DB. This DACPAC will contain the schemas, types and programmabilty of the existing database without any of the data in it.</p>
+<p>Below are the steps to create a database for a new TIS client:</p>
+<ol>
+<li>Connect to the ==sqls-nltintegration-prod.database.windows.net== server.</li>
+<li>Create a new Database with the following naming convention: {CLIENTNAME}DB.  <strong>Might be done via restore DACPAC? need to dbl check</strong></li>
+<li>Export the DACPAC.</li>
+<li>Restore the DACPAC onto new DB.</li>
+<li>Change the DB type on azure portal to be basic or standard.</li>
+<li>Login to aNS environment and get the API key.</li>
+<li>Encrypt the API key.</li>
+<li>Insert the configuration details into config table</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"></code></pre></div><ol start="9">
+<li>Insert configuration in syncLoop table.</li>
+<li>Run local testing of Azure function as described in step 3 here: [[TIS Sync Function setup]] to see if data is synchronised into the database.</li>
+</ol>
+<blockquote>
+<p>[!Note]
+It&rsquo;s important to note that there needs to be at least one learner in the DB for the sync to run correctly.
+Usually I will place a breakpoint at this point in the code, however you may insert a random learner into the DB to get this working as a work around.</p>
+</blockquote>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://localhost:1313/" >
+    &copy;  My New Hugo Site 2024 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

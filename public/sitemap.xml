@@ -11,10 +11,20 @@
     <loc>https://example.org/posts/</loc>
     <lastmod>2024-10-03T14:34:54+02:00</lastmod>
   </url><url>
-    <loc>https://example.org/posts/my-second-post/</loc>
+    <loc>https://example.org/posts/folder1/my-second-post/</loc>
     <lastmod>2024-10-03T14:34:54+02:00</lastmod>
   </url><url>
+    <loc>https://example.org/i.t-operations/cmd-&#43;-powershell-cheatsheet/</loc>
+  </url><url>
+    <loc>https://example.org/i.t-operations/git-cheatsheet/</loc>
+  </url><url>
+    <loc>https://example.org/i.t-operations/mysql-cheatsheet/</loc>
+  </url><url>
+    <loc>https://example.org/i.t-operations/terminal-cheatsheet/</loc>
+  </url><url>
     <loc>https://example.org/categories/</loc>
+  </url><url>
+    <loc>https://example.org/i.t-operations/</loc>
   </url><url>
     <loc>https://example.org/tags/</loc>
   </url>
