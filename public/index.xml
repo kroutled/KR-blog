@@ -15,5 +15,12 @@
       <guid>https://example.org/posts/my-first-post/</guid>
       <description>&lt;h1 id=&#34;hello-world-kroutled-here&#34;&gt;Hello world, Kroutled here&lt;/h1&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;I guess this is just some markdown as a testy test&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;well-that-should-do-it-for-now&#34;&gt;Well that should do it for now&lt;/h2&gt;</description>
     </item>
+    <item>
+      <title>Second post</title>
+      <link>https://example.org/posts/my-second-post/</link>
+      <pubDate>Thu, 03 Oct 2024 14:34:54 +0200</pubDate>
+      <guid>https://example.org/posts/my-second-post/</guid>
+      <description>&lt;h1 id=&#34;coolio-seems-like-things-are-moving-forward-with-regards-to-this&#34;&gt;Coolio seems like things are moving forward with regards to this&amp;hellip;&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Why&lt;/li&gt;&#xA;&lt;li&gt;do&lt;/li&gt;&#xA;&lt;li&gt;i&lt;/li&gt;&#xA;&lt;li&gt;feel&lt;/li&gt;&#xA;&lt;li&gt;like&lt;/li&gt;&#xA;&lt;li&gt;this&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;code&gt;wowa weewa&lt;/code&gt;&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>
