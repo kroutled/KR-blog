@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    
-    <title>My New Hugo Site</title>
-    <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="Connecting to MySQL
+<html lang="en-us" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="
+  Connecting to MySQL
+  #
+
 
   
       
@@ -29,7 +29,10 @@
       
   
 
-Database Operations
+
+  Database Operations
+  #
+
 
   
       
@@ -64,7 +67,10 @@ Database Operations
       
   
 
-Table Operations
+
+  Table Operations
+  #
+
 
   
       
@@ -107,7 +113,10 @@ Table Operations
       
   
 
-Basic Data Operations
+
+  Basic Data Operations
+  #
+
 
   
       
@@ -142,7 +151,10 @@ Basic Data Operations
       
   
 
-Filtering &amp; Sorting
+
+  Filtering &amp; Sorting
+  #
+
 
   
       
@@ -169,7 +181,10 @@ Filtering &amp; Sorting
       
   
 
-Joins (Combining Data from Multiple Tables)
+
+  Joins (Combining Data from Multiple Tables)
+  #
+
 
   
       
@@ -192,7 +207,10 @@ Joins (Combining Data from Multiple Tables)
       
   
 
-Indexes
+
+  Indexes
+  #
+
 
   
       
@@ -211,7 +229,10 @@ Indexes
       
   
 
-Foreign Keys
+
+  Foreign Keys
+  #
+
 
   
       
@@ -230,7 +251,10 @@ Foreign Keys
       
   
 
-Users and Permissions
+
+  Users and Permissions
+  #
+
 
   
       
@@ -265,7 +289,10 @@ Users and Permissions
       
   
 
-Backup and Restore
+
+  Backup and Restore
+  #
+
 
   
       
@@ -288,7 +315,10 @@ Backup and Restore
       
   
 
-Transactions
+
+  Transactions
+  #
+
 
   
       
@@ -311,7 +341,10 @@ Transactions
       
   
 
-Advanced Queries
+
+  Advanced Queries
+  #
+
 
   
       
@@ -350,7 +383,10 @@ Advanced Queries
       
   
 
-Import/Export Data
+
+  Import/Export Data
+  #
+
 
   
       
@@ -369,7 +405,10 @@ Import/Export Data
       
   
 
-Information and Debugging
+
+  Information and Debugging
+  #
+
 
   
       
@@ -392,123 +431,154 @@ Information and Debugging
       
   
 
-General Tips
+
+  General Tips
+  #
+
 
 End Every MySQL Command with a Semicolon (;): MySQL statements should be terminated with a semicolon.
 Case Sensitivity: MySQL commands are not case-sensitive, but database names and table names can be.
 ">
-    <meta name="generator" content="Hugo 0.135.0">
-    
-    
-    
-    
-      <meta name="robots" content="noindex, nofollow">
-    
-    
-
-    
-<link rel="stylesheet" href="/ananke/css/main.min.css" >
-
-
-
-    
-
-    
-      
-
-    
-
-    
-
-    
-      <link rel="canonical" href="https://example.org/i.t-operations/mysql-cheatsheet/">
-    
-
-    <meta property="og:url" content="https://example.org/i.t-operations/mysql-cheatsheet/">
-  <meta property="og:site_name" content="My New Hugo Site">
-  <meta property="og:title" content="My New Hugo Site">
-  <meta property="og:description" content="Connecting to MySQL Command Description mysql -u username -p Connect to MySQL as a specific user. You will be prompted for a password. mysql -u root -p Connect to MySQL as root (admin). exit Exit the MySQL shell. Database Operations Command Description SHOW DATABASES; List all databases on the server. CREATE DATABASE dbname; Create a new database. DROP DATABASE dbname; Delete a database (irreversible). USE dbname; Switch to and use a specific database. SELECT DATABASE(); Show the currently selected database. SHOW TABLES; List all tables in the current database. Table Operations Command Description CREATE TABLE tablename (columns); Create a new table with specified columns. SHOW COLUMNS FROM tablename; Show details of the columns in a table. DESCRIBE tablename; Describe the structure of a table. ALTER TABLE tablename ADD columnname datatype; Add a new column to an existing table. ALTER TABLE tablename DROP COLUMN columnname; Delete a column from a table. DROP TABLE tablename; Delete a table (irreversible). RENAME TABLE oldname TO newname; Rename a table. SHOW INDEX FROM tablename; Show indexes of a table. Basic Data Operations Command Description INSERT INTO tablename (columns) VALUES (values); Insert data into specific columns. SELECT * FROM tablename; Select all records from a table. SELECT column1, column2 FROM tablename; Select specific columns from a table. UPDATE tablename SET column1 = value WHERE condition; Update data in a table based on a condition. DELETE FROM tablename WHERE condition; Delete data from a table based on a condition. TRUNCATE TABLE tablename; Remove all data from a table but keep the table structure. Filtering &amp; Sorting Command Description SELECT * FROM tablename WHERE condition; Select records that match a specific condition. `SELECT * FROM tablename ORDER BY column ASC DESC;` SELECT * FROM tablename LIMIT number; Limit the number of rows returned. SELECT * FROM tablename WHERE column LIKE &#39;pattern&#39;; Filter results based on a pattern (e.g., % wildcard). Joins (Combining Data from Multiple Tables) Command Description SELECT * FROM table1 INNER JOIN table2 ON table1.column = table2.column; Perform an inner join (matching rows from both tables). SELECT * FROM table1 LEFT JOIN table2 ON table1.column = table2.column; Perform a left join (all rows from table1 and matching rows from table2). SELECT * FROM table1 RIGHT JOIN table2 ON table1.column = table2.column; Perform a right join (all rows from table2 and matching rows from table1). Indexes Command Description CREATE INDEX indexname ON tablename (column); Create an index on a column to speed up queries. DROP INDEX indexname ON tablename; Remove an index from a table. Foreign Keys Command Description ALTER TABLE childtable ADD CONSTRAINT fk_name FOREIGN KEY (childcolumn) REFERENCES parenttable(parentcolumn); Add a foreign key constraint. ALTER TABLE childtable DROP FOREIGN KEY fk_name; Drop a foreign key constraint. Users and Permissions Command Description CREATE USER &#39;username&#39;@&#39;host&#39; IDENTIFIED BY &#39;password&#39;; Create a new MySQL user. GRANT ALL PRIVILEGES ON dbname.* TO &#39;username&#39;@&#39;host&#39;; Grant all privileges to a user on a database. GRANT SELECT, INSERT ON dbname.* TO &#39;username&#39;@&#39;host&#39;; Grant specific privileges to a user on a database. SHOW GRANTS FOR &#39;username&#39;@&#39;host&#39;; Show the privileges of a specific user. REVOKE ALL PRIVILEGES ON dbname.* FROM &#39;username&#39;@&#39;host&#39;; Revoke all privileges from a user. DROP USER &#39;username&#39;@&#39;host&#39;; Delete a MySQL user. Backup and Restore Command Description mysqldump -u username -p dbname &gt; backup.sql Back up a database to a .sql file. mysqldump -u username -p --all-databases &gt; backup.sql Back up all databases. mysql -u username -p dbname &lt; backup.sql Restore a database from a backup file. Transactions Command Description START TRANSACTION; Begin a new transaction. COMMIT; Commit the current transaction. ROLLBACK; Roll back the current transaction (undo changes). Advanced Queries Command Description SELECT COUNT(*) FROM tablename; Count the number of rows in a table. SELECT AVG(column) FROM tablename; Calculate the average value of a column. SELECT SUM(column) FROM tablename; Calculate the sum of a column. SELECT MAX(column) FROM tablename; Find the maximum value in a column. SELECT MIN(column) FROM tablename; Find the minimum value in a column. GROUP BY column Group rows that have the same values in specified columns. HAVING condition Filter rows after the GROUP BY clause. Import/Export Data Command Description LOAD DATA INFILE &#39;filepath&#39; INTO TABLE tablename; Import data from a file into a table. SELECT * INTO OUTFILE &#39;filepath&#39; FROM tablename; Export data from a table into a file. Information and Debugging Command Description SHOW PROCESSLIST; Show running MySQL processes (useful for debugging). SHOW VARIABLES LIKE &#39;%timeout%&#39;; Show current timeout settings for MySQL connections. SHOW ENGINE INNODB STATUS; Show detailed InnoDB engine status (useful for diagnosing issues). General Tips End Every MySQL Command with a Semicolon (;): MySQL statements should be terminated with a semicolon. Case Sensitivity: MySQL commands are not case-sensitive, but database names and table names can be. ">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/i.t-operations/mysql-cheatsheet/">
+  <meta property="og:site_name" content="kr-blog">
+  <meta property="og:title" content="kr-blog">
+  <meta property="og:description" content="Connecting to MySQL#Command Description mysql -u username -p Connect to MySQL as a specific user. You will be prompted for a password. mysql -u root -p Connect to MySQL as root (admin). exit Exit the MySQL shell. Database Operations#Command Description SHOW DATABASES; List all databases on the server. CREATE DATABASE dbname; Create a new database. DROP DATABASE dbname; Delete a database (irreversible). USE dbname; Switch to and use a specific database. SELECT DATABASE(); Show the currently selected database. SHOW TABLES; List all tables in the current database. Table Operations#Command Description CREATE TABLE tablename (columns); Create a new table with specified columns. SHOW COLUMNS FROM tablename; Show details of the columns in a table. DESCRIBE tablename; Describe the structure of a table. ALTER TABLE tablename ADD columnname datatype; Add a new column to an existing table. ALTER TABLE tablename DROP COLUMN columnname; Delete a column from a table. DROP TABLE tablename; Delete a table (irreversible). RENAME TABLE oldname TO newname; Rename a table. SHOW INDEX FROM tablename; Show indexes of a table. Basic Data Operations#Command Description INSERT INTO tablename (columns) VALUES (values); Insert data into specific columns. SELECT * FROM tablename; Select all records from a table. SELECT column1, column2 FROM tablename; Select specific columns from a table. UPDATE tablename SET column1 = value WHERE condition; Update data in a table based on a condition. DELETE FROM tablename WHERE condition; Delete data from a table based on a condition. TRUNCATE TABLE tablename; Remove all data from a table but keep the table structure. Filtering &amp; Sorting#Command Description SELECT * FROM tablename WHERE condition; Select records that match a specific condition. `SELECT * FROM tablename ORDER BY column ASC DESC;` SELECT * FROM tablename LIMIT number; Limit the number of rows returned. SELECT * FROM tablename WHERE column LIKE &#39;pattern&#39;; Filter results based on a pattern (e.g., % wildcard). Joins (Combining Data from Multiple Tables)#Command Description SELECT * FROM table1 INNER JOIN table2 ON table1.column = table2.column; Perform an inner join (matching rows from both tables). SELECT * FROM table1 LEFT JOIN table2 ON table1.column = table2.column; Perform a left join (all rows from table1 and matching rows from table2). SELECT * FROM table1 RIGHT JOIN table2 ON table1.column = table2.column; Perform a right join (all rows from table2 and matching rows from table1). Indexes#Command Description CREATE INDEX indexname ON tablename (column); Create an index on a column to speed up queries. DROP INDEX indexname ON tablename; Remove an index from a table. Foreign Keys#Command Description ALTER TABLE childtable ADD CONSTRAINT fk_name FOREIGN KEY (childcolumn) REFERENCES parenttable(parentcolumn); Add a foreign key constraint. ALTER TABLE childtable DROP FOREIGN KEY fk_name; Drop a foreign key constraint. Users and Permissions#Command Description CREATE USER &#39;username&#39;@&#39;host&#39; IDENTIFIED BY &#39;password&#39;; Create a new MySQL user. GRANT ALL PRIVILEGES ON dbname.* TO &#39;username&#39;@&#39;host&#39;; Grant all privileges to a user on a database. GRANT SELECT, INSERT ON dbname.* TO &#39;username&#39;@&#39;host&#39;; Grant specific privileges to a user on a database. SHOW GRANTS FOR &#39;username&#39;@&#39;host&#39;; Show the privileges of a specific user. REVOKE ALL PRIVILEGES ON dbname.* FROM &#39;username&#39;@&#39;host&#39;; Revoke all privileges from a user. DROP USER &#39;username&#39;@&#39;host&#39;; Delete a MySQL user. Backup and Restore#Command Description mysqldump -u username -p dbname &gt; backup.sql Back up a database to a .sql file. mysqldump -u username -p --all-databases &gt; backup.sql Back up all databases. mysql -u username -p dbname &lt; backup.sql Restore a database from a backup file. Transactions#Command Description START TRANSACTION; Begin a new transaction. COMMIT; Commit the current transaction. ROLLBACK; Roll back the current transaction (undo changes). Advanced Queries#Command Description SELECT COUNT(*) FROM tablename; Count the number of rows in a table. SELECT AVG(column) FROM tablename; Calculate the average value of a column. SELECT SUM(column) FROM tablename; Calculate the sum of a column. SELECT MAX(column) FROM tablename; Find the maximum value in a column. SELECT MIN(column) FROM tablename; Find the minimum value in a column. GROUP BY column Group rows that have the same values in specified columns. HAVING condition Filter rows after the GROUP BY clause. Import/Export Data#Command Description LOAD DATA INFILE &#39;filepath&#39; INTO TABLE tablename; Import data from a file into a table. SELECT * INTO OUTFILE &#39;filepath&#39; FROM tablename; Export data from a table into a file. Information and Debugging#Command Description SHOW PROCESSLIST; Show running MySQL processes (useful for debugging). SHOW VARIABLES LIKE &#39;%timeout%&#39;; Show current timeout settings for MySQL connections. SHOW ENGINE INNODB STATUS; Show detailed InnoDB engine status (useful for diagnosing issues). General Tips#End Every MySQL Command with a Semicolon (;): MySQL statements should be terminated with a semicolon. Case Sensitivity: MySQL commands are not case-sensitive, but database names and table names can be. ">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="i.t-operations">
-
-  <meta itemprop="name" content="My New Hugo Site">
-  <meta itemprop="description" content="Connecting to MySQL Command Description mysql -u username -p Connect to MySQL as a specific user. You will be prompted for a password. mysql -u root -p Connect to MySQL as root (admin). exit Exit the MySQL shell. Database Operations Command Description SHOW DATABASES; List all databases on the server. CREATE DATABASE dbname; Create a new database. DROP DATABASE dbname; Delete a database (irreversible). USE dbname; Switch to and use a specific database. SELECT DATABASE(); Show the currently selected database. SHOW TABLES; List all tables in the current database. Table Operations Command Description CREATE TABLE tablename (columns); Create a new table with specified columns. SHOW COLUMNS FROM tablename; Show details of the columns in a table. DESCRIBE tablename; Describe the structure of a table. ALTER TABLE tablename ADD columnname datatype; Add a new column to an existing table. ALTER TABLE tablename DROP COLUMN columnname; Delete a column from a table. DROP TABLE tablename; Delete a table (irreversible). RENAME TABLE oldname TO newname; Rename a table. SHOW INDEX FROM tablename; Show indexes of a table. Basic Data Operations Command Description INSERT INTO tablename (columns) VALUES (values); Insert data into specific columns. SELECT * FROM tablename; Select all records from a table. SELECT column1, column2 FROM tablename; Select specific columns from a table. UPDATE tablename SET column1 = value WHERE condition; Update data in a table based on a condition. DELETE FROM tablename WHERE condition; Delete data from a table based on a condition. TRUNCATE TABLE tablename; Remove all data from a table but keep the table structure. Filtering &amp; Sorting Command Description SELECT * FROM tablename WHERE condition; Select records that match a specific condition. `SELECT * FROM tablename ORDER BY column ASC DESC;` SELECT * FROM tablename LIMIT number; Limit the number of rows returned. SELECT * FROM tablename WHERE column LIKE &#39;pattern&#39;; Filter results based on a pattern (e.g., % wildcard). Joins (Combining Data from Multiple Tables) Command Description SELECT * FROM table1 INNER JOIN table2 ON table1.column = table2.column; Perform an inner join (matching rows from both tables). SELECT * FROM table1 LEFT JOIN table2 ON table1.column = table2.column; Perform a left join (all rows from table1 and matching rows from table2). SELECT * FROM table1 RIGHT JOIN table2 ON table1.column = table2.column; Perform a right join (all rows from table2 and matching rows from table1). Indexes Command Description CREATE INDEX indexname ON tablename (column); Create an index on a column to speed up queries. DROP INDEX indexname ON tablename; Remove an index from a table. Foreign Keys Command Description ALTER TABLE childtable ADD CONSTRAINT fk_name FOREIGN KEY (childcolumn) REFERENCES parenttable(parentcolumn); Add a foreign key constraint. ALTER TABLE childtable DROP FOREIGN KEY fk_name; Drop a foreign key constraint. Users and Permissions Command Description CREATE USER &#39;username&#39;@&#39;host&#39; IDENTIFIED BY &#39;password&#39;; Create a new MySQL user. GRANT ALL PRIVILEGES ON dbname.* TO &#39;username&#39;@&#39;host&#39;; Grant all privileges to a user on a database. GRANT SELECT, INSERT ON dbname.* TO &#39;username&#39;@&#39;host&#39;; Grant specific privileges to a user on a database. SHOW GRANTS FOR &#39;username&#39;@&#39;host&#39;; Show the privileges of a specific user. REVOKE ALL PRIVILEGES ON dbname.* FROM &#39;username&#39;@&#39;host&#39;; Revoke all privileges from a user. DROP USER &#39;username&#39;@&#39;host&#39;; Delete a MySQL user. Backup and Restore Command Description mysqldump -u username -p dbname &gt; backup.sql Back up a database to a .sql file. mysqldump -u username -p --all-databases &gt; backup.sql Back up all databases. mysql -u username -p dbname &lt; backup.sql Restore a database from a backup file. Transactions Command Description START TRANSACTION; Begin a new transaction. COMMIT; Commit the current transaction. ROLLBACK; Roll back the current transaction (undo changes). Advanced Queries Command Description SELECT COUNT(*) FROM tablename; Count the number of rows in a table. SELECT AVG(column) FROM tablename; Calculate the average value of a column. SELECT SUM(column) FROM tablename; Calculate the sum of a column. SELECT MAX(column) FROM tablename; Find the maximum value in a column. SELECT MIN(column) FROM tablename; Find the minimum value in a column. GROUP BY column Group rows that have the same values in specified columns. HAVING condition Filter rows after the GROUP BY clause. Import/Export Data Command Description LOAD DATA INFILE &#39;filepath&#39; INTO TABLE tablename; Import data from a file into a table. SELECT * INTO OUTFILE &#39;filepath&#39; FROM tablename; Export data from a table into a file. Information and Debugging Command Description SHOW PROCESSLIST; Show running MySQL processes (useful for debugging). SHOW VARIABLES LIKE &#39;%timeout%&#39;; Show current timeout settings for MySQL connections. SHOW ENGINE INNODB STATUS; Show detailed InnoDB engine status (useful for diagnosing issues). General Tips End Every MySQL Command with a Semicolon (;): MySQL statements should be terminated with a semicolon. Case Sensitivity: MySQL commands are not case-sensitive, but database names and table names can be. ">
-  <meta itemprop="wordCount" content="782">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="My New Hugo Site">
-  <meta name="twitter:description" content="Connecting to MySQL Command Description mysql -u username -p Connect to MySQL as a specific user. You will be prompted for a password. mysql -u root -p Connect to MySQL as root (admin). exit Exit the MySQL shell. Database Operations Command Description SHOW DATABASES; List all databases on the server. CREATE DATABASE dbname; Create a new database. DROP DATABASE dbname; Delete a database (irreversible). USE dbname; Switch to and use a specific database. SELECT DATABASE(); Show the currently selected database. SHOW TABLES; List all tables in the current database. Table Operations Command Description CREATE TABLE tablename (columns); Create a new table with specified columns. SHOW COLUMNS FROM tablename; Show details of the columns in a table. DESCRIBE tablename; Describe the structure of a table. ALTER TABLE tablename ADD columnname datatype; Add a new column to an existing table. ALTER TABLE tablename DROP COLUMN columnname; Delete a column from a table. DROP TABLE tablename; Delete a table (irreversible). RENAME TABLE oldname TO newname; Rename a table. SHOW INDEX FROM tablename; Show indexes of a table. Basic Data Operations Command Description INSERT INTO tablename (columns) VALUES (values); Insert data into specific columns. SELECT * FROM tablename; Select all records from a table. SELECT column1, column2 FROM tablename; Select specific columns from a table. UPDATE tablename SET column1 = value WHERE condition; Update data in a table based on a condition. DELETE FROM tablename WHERE condition; Delete data from a table based on a condition. TRUNCATE TABLE tablename; Remove all data from a table but keep the table structure. Filtering &amp; Sorting Command Description SELECT * FROM tablename WHERE condition; Select records that match a specific condition. `SELECT * FROM tablename ORDER BY column ASC DESC;` SELECT * FROM tablename LIMIT number; Limit the number of rows returned. SELECT * FROM tablename WHERE column LIKE &#39;pattern&#39;; Filter results based on a pattern (e.g., % wildcard). Joins (Combining Data from Multiple Tables) Command Description SELECT * FROM table1 INNER JOIN table2 ON table1.column = table2.column; Perform an inner join (matching rows from both tables). SELECT * FROM table1 LEFT JOIN table2 ON table1.column = table2.column; Perform a left join (all rows from table1 and matching rows from table2). SELECT * FROM table1 RIGHT JOIN table2 ON table1.column = table2.column; Perform a right join (all rows from table2 and matching rows from table1). Indexes Command Description CREATE INDEX indexname ON tablename (column); Create an index on a column to speed up queries. DROP INDEX indexname ON tablename; Remove an index from a table. Foreign Keys Command Description ALTER TABLE childtable ADD CONSTRAINT fk_name FOREIGN KEY (childcolumn) REFERENCES parenttable(parentcolumn); Add a foreign key constraint. ALTER TABLE childtable DROP FOREIGN KEY fk_name; Drop a foreign key constraint. Users and Permissions Command Description CREATE USER &#39;username&#39;@&#39;host&#39; IDENTIFIED BY &#39;password&#39;; Create a new MySQL user. GRANT ALL PRIVILEGES ON dbname.* TO &#39;username&#39;@&#39;host&#39;; Grant all privileges to a user on a database. GRANT SELECT, INSERT ON dbname.* TO &#39;username&#39;@&#39;host&#39;; Grant specific privileges to a user on a database. SHOW GRANTS FOR &#39;username&#39;@&#39;host&#39;; Show the privileges of a specific user. REVOKE ALL PRIVILEGES ON dbname.* FROM &#39;username&#39;@&#39;host&#39;; Revoke all privileges from a user. DROP USER &#39;username&#39;@&#39;host&#39;; Delete a MySQL user. Backup and Restore Command Description mysqldump -u username -p dbname &gt; backup.sql Back up a database to a .sql file. mysqldump -u username -p --all-databases &gt; backup.sql Back up all databases. mysql -u username -p dbname &lt; backup.sql Restore a database from a backup file. Transactions Command Description START TRANSACTION; Begin a new transaction. COMMIT; Commit the current transaction. ROLLBACK; Roll back the current transaction (undo changes). Advanced Queries Command Description SELECT COUNT(*) FROM tablename; Count the number of rows in a table. SELECT AVG(column) FROM tablename; Calculate the average value of a column. SELECT SUM(column) FROM tablename; Calculate the sum of a column. SELECT MAX(column) FROM tablename; Find the maximum value in a column. SELECT MIN(column) FROM tablename; Find the minimum value in a column. GROUP BY column Group rows that have the same values in specified columns. HAVING condition Filter rows after the GROUP BY clause. Import/Export Data Command Description LOAD DATA INFILE &#39;filepath&#39; INTO TABLE tablename; Import data from a file into a table. SELECT * INTO OUTFILE &#39;filepath&#39; FROM tablename; Export data from a table into a file. Information and Debugging Command Description SHOW PROCESSLIST; Show running MySQL processes (useful for debugging). SHOW VARIABLES LIKE &#39;%timeout%&#39;; Show current timeout settings for MySQL connections. SHOW ENGINE INNODB STATUS; Show detailed InnoDB engine status (useful for diagnosing issues). General Tips End Every MySQL Command with a Semicolon (;): MySQL statements should be terminated with a semicolon. Case Sensitivity: MySQL commands are not case-sensitive, but database names and table names can be. ">
-
-	
-  </head>
-
-  <body class="ma0 avenir bg-near-white">
-
-    
-   
+<title>My SQL Cheatsheet | kr-blog</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" >
+<link rel="canonical" href="http://localhost:1313/i.t-operations/mysql-cheatsheet/">
+<link rel="stylesheet" href="/book.min.f019955684d0f5b49c2f421c16bd7274f6ec699bc5a7c19809cbd22ac70e826e.css" integrity="sha256-8BmVVoTQ9bScL0IcFr1ydPbsaZvFp8GYCcvSKscOgm4=" crossorigin="anonymous">
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.668f039a6fda5734f89ebfb8ccb5ded116cd751b7ebcba7fccc8fb2e6e6fa8f3.js" integrity="sha256-Zo8Dmm/aVzT4nr&#43;4zLXe0RbNdRt&#43;vLp/zMj7Lm5vqPM=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
   
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>kr-blog</span>
+  </a>
+</h2>
 
-  <header>
-    <div class="bg-black">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l justify-between items-center center">
-    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
-      
-        My New Hugo Site
-      
-    </a>
-    <div class="flex-l items-center">
-      
 
-      
-      
-<div class="ananke-socials">
-  
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
 </div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
 
-    </div>
-  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </nav>
 
-    </div>
-  </header>
 
 
 
-    <main class="pb7" role="main">
-      
-  
-  <article class="flex-l flex-wrap justify-between mw8 center ph3">
-    <header class="mt4 w-100">
-      <aside class="instapaper_ignoref b helvetica tracked ttu">
-          
-        I.T Operations
-      </aside>
-      
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
 
 
+ 
+      </div>
+    </aside>
 
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
 
+  <strong>My SQL Cheatsheet</strong>
 
-
-
-
-
-
-  <div id="sharing" class="mt3 ananke-socials">
+  <label for="toc-control">
     
-  </div>
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
 
 
-      <h1 class="f1 athelas mt3 mb1"></h1>
-      
-      
-      
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#connecting-to-mysql"><strong>Connecting to MySQL</strong></a></li>
+        <li><a href="#database-operations"><strong>Database Operations</strong></a></li>
+        <li><a href="#table-operations"><strong>Table Operations</strong></a></li>
+        <li><a href="#basic-data-operations"><strong>Basic Data Operations</strong></a></li>
+        <li><a href="#filtering--sorting"><strong>Filtering &amp; Sorting</strong></a></li>
+        <li><a href="#joins-combining-data-from-multiple-tables"><strong>Joins (Combining Data from Multiple Tables)</strong></a></li>
+        <li><a href="#indexes"><strong>Indexes</strong></a></li>
+        <li><a href="#foreign-keys"><strong>Foreign Keys</strong></a></li>
+        <li><a href="#users-and-permissions"><strong>Users and Permissions</strong></a></li>
+        <li><a href="#backup-and-restore"><strong>Backup and Restore</strong></a></li>
+        <li><a href="#transactions"><strong>Transactions</strong></a></li>
+        <li><a href="#advanced-queries"><strong>Advanced Queries</strong></a></li>
+        <li><a href="#importexport-data"><strong>Import/Export Data</strong></a></li>
+        <li><a href="#information-and-debugging"><strong>Information and Debugging</strong></a></li>
+        <li><a href="#general-tips"><strong>General Tips</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
 
       
       
-    </header>
-    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h3 id="connecting-to-mysql"><strong>Connecting to MySQL</strong></h3>
+  <article class="markdown book-article"><h3 id="connecting-to-mysql">
+  <strong>Connecting to MySQL</strong>
+  <a class="anchor" href="#connecting-to-mysql">#</a>
+</h3>
 <table>
   <thead>
       <tr>
@@ -531,7 +601,10 @@ Case Sensitivity: MySQL commands are not case-sensitive, but database names and 
       </tr>
   </tbody>
 </table>
-<h3 id="database-operations"><strong>Database Operations</strong></h3>
+<h3 id="database-operations">
+  <strong>Database Operations</strong>
+  <a class="anchor" href="#database-operations">#</a>
+</h3>
 <table>
   <thead>
       <tr>
@@ -566,7 +639,10 @@ Case Sensitivity: MySQL commands are not case-sensitive, but database names and 
       </tr>
   </tbody>
 </table>
-<h3 id="table-operations"><strong>Table Operations</strong></h3>
+<h3 id="table-operations">
+  <strong>Table Operations</strong>
+  <a class="anchor" href="#table-operations">#</a>
+</h3>
 <table>
   <thead>
       <tr>
@@ -609,7 +685,10 @@ Case Sensitivity: MySQL commands are not case-sensitive, but database names and 
       </tr>
   </tbody>
 </table>
-<h3 id="basic-data-operations"><strong>Basic Data Operations</strong></h3>
+<h3 id="basic-data-operations">
+  <strong>Basic Data Operations</strong>
+  <a class="anchor" href="#basic-data-operations">#</a>
+</h3>
 <table>
   <thead>
       <tr>
@@ -644,7 +723,10 @@ Case Sensitivity: MySQL commands are not case-sensitive, but database names and 
       </tr>
   </tbody>
 </table>
-<h3 id="filtering--sorting"><strong>Filtering &amp; Sorting</strong></h3>
+<h3 id="filtering--sorting">
+  <strong>Filtering &amp; Sorting</strong>
+  <a class="anchor" href="#filtering--sorting">#</a>
+</h3>
 <table>
   <thead>
       <tr>
@@ -671,7 +753,10 @@ Case Sensitivity: MySQL commands are not case-sensitive, but database names and 
       </tr>
   </tbody>
 </table>
-<h3 id="joins-combining-data-from-multiple-tables"><strong>Joins (Combining Data from Multiple Tables)</strong></h3>
+<h3 id="joins-combining-data-from-multiple-tables">
+  <strong>Joins (Combining Data from Multiple Tables)</strong>
+  <a class="anchor" href="#joins-combining-data-from-multiple-tables">#</a>
+</h3>
 <table>
   <thead>
       <tr>
@@ -694,7 +779,10 @@ Case Sensitivity: MySQL commands are not case-sensitive, but database names and 
       </tr>
   </tbody>
 </table>
-<h3 id="indexes"><strong>Indexes</strong></h3>
+<h3 id="indexes">
+  <strong>Indexes</strong>
+  <a class="anchor" href="#indexes">#</a>
+</h3>
 <table>
   <thead>
       <tr>
@@ -713,7 +801,10 @@ Case Sensitivity: MySQL commands are not case-sensitive, but database names and 
       </tr>
   </tbody>
 </table>
-<h3 id="foreign-keys"><strong>Foreign Keys</strong></h3>
+<h3 id="foreign-keys">
+  <strong>Foreign Keys</strong>
+  <a class="anchor" href="#foreign-keys">#</a>
+</h3>
 <table>
   <thead>
       <tr>
@@ -732,7 +823,10 @@ Case Sensitivity: MySQL commands are not case-sensitive, but database names and 
       </tr>
   </tbody>
 </table>
-<h3 id="users-and-permissions"><strong>Users and Permissions</strong></h3>
+<h3 id="users-and-permissions">
+  <strong>Users and Permissions</strong>
+  <a class="anchor" href="#users-and-permissions">#</a>
+</h3>
 <table>
   <thead>
       <tr>
@@ -767,7 +861,10 @@ Case Sensitivity: MySQL commands are not case-sensitive, but database names and 
       </tr>
   </tbody>
 </table>
-<h3 id="backup-and-restore"><strong>Backup and Restore</strong></h3>
+<h3 id="backup-and-restore">
+  <strong>Backup and Restore</strong>
+  <a class="anchor" href="#backup-and-restore">#</a>
+</h3>
 <table>
   <thead>
       <tr>
@@ -790,7 +887,10 @@ Case Sensitivity: MySQL commands are not case-sensitive, but database names and 
       </tr>
   </tbody>
 </table>
-<h3 id="transactions"><strong>Transactions</strong></h3>
+<h3 id="transactions">
+  <strong>Transactions</strong>
+  <a class="anchor" href="#transactions">#</a>
+</h3>
 <table>
   <thead>
       <tr>
@@ -813,7 +913,10 @@ Case Sensitivity: MySQL commands are not case-sensitive, but database names and 
       </tr>
   </tbody>
 </table>
-<h3 id="advanced-queries"><strong>Advanced Queries</strong></h3>
+<h3 id="advanced-queries">
+  <strong>Advanced Queries</strong>
+  <a class="anchor" href="#advanced-queries">#</a>
+</h3>
 <table>
   <thead>
       <tr>
@@ -852,7 +955,10 @@ Case Sensitivity: MySQL commands are not case-sensitive, but database names and 
       </tr>
   </tbody>
 </table>
-<h3 id="importexport-data"><strong>Import/Export Data</strong></h3>
+<h3 id="importexport-data">
+  <strong>Import/Export Data</strong>
+  <a class="anchor" href="#importexport-data">#</a>
+</h3>
 <table>
   <thead>
       <tr>
@@ -871,7 +977,10 @@ Case Sensitivity: MySQL commands are not case-sensitive, but database names and 
       </tr>
   </tbody>
 </table>
-<h3 id="information-and-debugging"><strong>Information and Debugging</strong></h3>
+<h3 id="information-and-debugging">
+  <strong>Information and Debugging</strong>
+  <a class="anchor" href="#information-and-debugging">#</a>
+</h3>
 <table>
   <thead>
       <tr>
@@ -894,42 +1003,96 @@ Case Sensitivity: MySQL commands are not case-sensitive, but database names and 
       </tr>
   </tbody>
 </table>
-<h3 id="general-tips"><strong>General Tips</strong></h3>
+<h3 id="general-tips">
+  <strong>General Tips</strong>
+  <a class="anchor" href="#general-tips">#</a>
+</h3>
 <ul>
 <li><strong>End Every MySQL Command with a Semicolon (<code>;</code>):</strong> MySQL statements should be terminated with a semicolon.</li>
 <li><strong>Case Sensitivity:</strong> MySQL commands are not case-sensitive, but database names and table names can be.</li>
 </ul>
-<ul class="pa0">
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
   
-</ul>
-<div class="mt6 instapaper_ignoref">
-      
-      
-      </div>
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
     </div>
 
-    <aside class="w-30-l mt6-l">
-
-
-
-
-</aside>
-
-  </article>
-
-    </main>
-    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://example.org/" >
-    &copy;  My New Hugo Site 2024 
-  </a>
-    <div>
-<div class="ananke-socials">
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
   
-</div>
-</div>
-  </div>
-</footer>
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#connecting-to-mysql"><strong>Connecting to MySQL</strong></a></li>
+        <li><a href="#database-operations"><strong>Database Operations</strong></a></li>
+        <li><a href="#table-operations"><strong>Table Operations</strong></a></li>
+        <li><a href="#basic-data-operations"><strong>Basic Data Operations</strong></a></li>
+        <li><a href="#filtering--sorting"><strong>Filtering &amp; Sorting</strong></a></li>
+        <li><a href="#joins-combining-data-from-multiple-tables"><strong>Joins (Combining Data from Multiple Tables)</strong></a></li>
+        <li><a href="#indexes"><strong>Indexes</strong></a></li>
+        <li><a href="#foreign-keys"><strong>Foreign Keys</strong></a></li>
+        <li><a href="#users-and-permissions"><strong>Users and Permissions</strong></a></li>
+        <li><a href="#backup-and-restore"><strong>Backup and Restore</strong></a></li>
+        <li><a href="#transactions"><strong>Transactions</strong></a></li>
+        <li><a href="#advanced-queries"><strong>Advanced Queries</strong></a></li>
+        <li><a href="#importexport-data"><strong>Import/Export Data</strong></a></li>
+        <li><a href="#information-and-debugging"><strong>Information and Debugging</strong></a></li>
+        <li><a href="#general-tips"><strong>General Tips</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
 
-  </body>
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

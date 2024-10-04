@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    
-    <title>My New Hugo Site</title>
-    <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="Git Basics
+<html lang="en-us" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="
+  Git Basics
+  #
+
 
   
       
@@ -57,7 +57,10 @@
       
   
 
-Branching &amp; Merging
+
+  Branching &amp; Merging
+  #
+
 
   
       
@@ -108,7 +111,10 @@ Branching &amp; Merging
       
   
 
-Remote Repositories
+
+  Remote Repositories
+  #
+
 
   
       
@@ -147,7 +153,10 @@ Remote Repositories
       
   
 
-Undoing Changes
+
+  Undoing Changes
+  #
+
 
   
       
@@ -178,7 +187,10 @@ Undoing Changes
       
   
 
-Viewing and Comparing Changes
+
+  Viewing and Comparing Changes
+  #
+
 
   
       
@@ -201,7 +213,10 @@ Viewing and Comparing Changes
       
   
 
-Tagging
+
+  Tagging
+  #
+
 
   
       
@@ -232,7 +247,10 @@ Tagging
       
   
 
-Configuration
+
+  Configuration
+  #
+
 
   
       
@@ -263,7 +281,10 @@ Configuration
       
   
 
-Working with Commits
+
+  Working with Commits
+  #
+
 
   
       
@@ -282,120 +303,146 @@ Working with Commits
       
   
 
-Git Aliases (Optional, for Convenience)
+
+  Git Aliases (Optional, for Convenience)
+  #
+
 You can create aliases for frequently used commands:">
-    <meta name="generator" content="Hugo 0.135.0">
-    
-    
-    
-    
-      <meta name="robots" content="noindex, nofollow">
-    
-    
-
-    
-<link rel="stylesheet" href="/ananke/css/main.min.css" >
-
-
-
-    
-
-    
-      
-
-    
-
-    
-
-    
-      <link rel="canonical" href="https://example.org/i.t-operations/git-cheatsheet/">
-    
-
-    <meta property="og:url" content="https://example.org/i.t-operations/git-cheatsheet/">
-  <meta property="og:site_name" content="My New Hugo Site">
-  <meta property="og:title" content="My New Hugo Site">
-  <meta property="og:description" content="Git Basics Command Description git init Initialize a new Git repository in your current directory. git clone &lt;repo-url&gt; Clone an existing repository from a URL. git status Show the current state of the working directory and staging area. git add &lt;file&gt; Stage a specific file for the next commit. git add . Stage all changes in the current directory. git commit -m &#34;message&#34; Commit staged changes with a message. git log View the commit history. git log --oneline View the commit history in a compact format. git diff Show changes between working directory and index/staging area. git diff --staged Show changes between staging area and last commit. Branching &amp; Merging Command Description git branch List all branches. git branch &lt;branch-name&gt; Create a new branch. git checkout &lt;branch-name&gt; Switch to a different branch. git checkout -b &lt;branch-name&gt; Create a new branch and switch to it. git merge &lt;branch-name&gt; Merge a branch into the current branch. git branch -d &lt;branch-name&gt; Delete a branch (only if fully merged). git branch -D &lt;branch-name&gt; Force delete a branch. git stash Save changes for later without committing. git stash pop Apply the most recent stash and remove it from the stash list. git stash list View saved stashes. Remote Repositories Command Description git remote -v View remote URLs linked to your repository. git remote add origin &lt;url&gt; Add a remote repository with the name origin. git push -u origin &lt;branch-name&gt; Push to a remote branch and set it as the upstream for future pushes. git push origin &lt;branch-name&gt; Push local changes to a remote repository. git push --all origin Push all branches to the remote repository. git pull Fetch and merge changes from the remote repository. git fetch Fetch changes from the remote repository (without merging). Undoing Changes Command Description git reset &lt;file&gt; Unstage a file (leave changes in working directory). git reset --hard &lt;commit&gt; Reset the working directory and index to a previous commit (dangerous!). git checkout -- &lt;file&gt; Discard changes in the working directory for a file. git revert &lt;commit&gt; Create a new commit that undoes changes from a specific commit. git reset HEAD~1 Undo the last commit, keep changes in the working directory. Viewing and Comparing Changes Command Description git show &lt;commit&gt; Show the changes in a specific commit. git diff &lt;branch-name&gt; Show the differences between your working directory and a branch. git log --graph --oneline --all View the history of all branches in a compact graph. Tagging Command Description git tag List all tags in the repository. git tag &lt;tag-name&gt; Create a new tag at the current commit. git tag -a &lt;tag-name&gt; -m &#34;message&#34; Create an annotated tag with a message. git push origin &lt;tag-name&gt; Push a tag to the remote repository. git push --tags Push all tags to the remote repository. Configuration Command Description git config --list View all Git configuration settings. git config user.name &#34;Your Name&#34; Set your Git username. git config user.email &#34;you@example.com&#34; Set your Git email address. git config --global user.name &#34;Your Name&#34; Set your Git username globally for all repositories. git config --global core.editor &#34;vim&#34; Set the default text editor for Git globally. Working with Commits Command Description git commit --amend Amend the last commit (e.g., to fix the commit message). git cherry-pick &lt;commit&gt; Apply the changes from a specific commit on top of your current branch. Git Aliases (Optional, for Convenience) You can create aliases for frequently used commands:">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/i.t-operations/git-cheatsheet/">
+  <meta property="og:site_name" content="kr-blog">
+  <meta property="og:title" content="kr-blog">
+  <meta property="og:description" content="Git Basics#Command Description git init Initialize a new Git repository in your current directory. git clone &lt;repo-url&gt; Clone an existing repository from a URL. git status Show the current state of the working directory and staging area. git add &lt;file&gt; Stage a specific file for the next commit. git add . Stage all changes in the current directory. git commit -m &#34;message&#34; Commit staged changes with a message. git log View the commit history. git log --oneline View the commit history in a compact format. git diff Show changes between working directory and index/staging area. git diff --staged Show changes between staging area and last commit. Branching &amp; Merging#Command Description git branch List all branches. git branch &lt;branch-name&gt; Create a new branch. git checkout &lt;branch-name&gt; Switch to a different branch. git checkout -b &lt;branch-name&gt; Create a new branch and switch to it. git merge &lt;branch-name&gt; Merge a branch into the current branch. git branch -d &lt;branch-name&gt; Delete a branch (only if fully merged). git branch -D &lt;branch-name&gt; Force delete a branch. git stash Save changes for later without committing. git stash pop Apply the most recent stash and remove it from the stash list. git stash list View saved stashes. Remote Repositories#Command Description git remote -v View remote URLs linked to your repository. git remote add origin &lt;url&gt; Add a remote repository with the name origin. git push -u origin &lt;branch-name&gt; Push to a remote branch and set it as the upstream for future pushes. git push origin &lt;branch-name&gt; Push local changes to a remote repository. git push --all origin Push all branches to the remote repository. git pull Fetch and merge changes from the remote repository. git fetch Fetch changes from the remote repository (without merging). Undoing Changes#Command Description git reset &lt;file&gt; Unstage a file (leave changes in working directory). git reset --hard &lt;commit&gt; Reset the working directory and index to a previous commit (dangerous!). git checkout -- &lt;file&gt; Discard changes in the working directory for a file. git revert &lt;commit&gt; Create a new commit that undoes changes from a specific commit. git reset HEAD~1 Undo the last commit, keep changes in the working directory. Viewing and Comparing Changes#Command Description git show &lt;commit&gt; Show the changes in a specific commit. git diff &lt;branch-name&gt; Show the differences between your working directory and a branch. git log --graph --oneline --all View the history of all branches in a compact graph. Tagging#Command Description git tag List all tags in the repository. git tag &lt;tag-name&gt; Create a new tag at the current commit. git tag -a &lt;tag-name&gt; -m &#34;message&#34; Create an annotated tag with a message. git push origin &lt;tag-name&gt; Push a tag to the remote repository. git push --tags Push all tags to the remote repository. Configuration#Command Description git config --list View all Git configuration settings. git config user.name &#34;Your Name&#34; Set your Git username. git config user.email &#34;you@example.com&#34; Set your Git email address. git config --global user.name &#34;Your Name&#34; Set your Git username globally for all repositories. git config --global core.editor &#34;vim&#34; Set the default text editor for Git globally. Working with Commits#Command Description git commit --amend Amend the last commit (e.g., to fix the commit message). git cherry-pick &lt;commit&gt; Apply the changes from a specific commit on top of your current branch. Git Aliases (Optional, for Convenience)#You can create aliases for frequently used commands:">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="i.t-operations">
-
-  <meta itemprop="name" content="My New Hugo Site">
-  <meta itemprop="description" content="Git Basics Command Description git init Initialize a new Git repository in your current directory. git clone &lt;repo-url&gt; Clone an existing repository from a URL. git status Show the current state of the working directory and staging area. git add &lt;file&gt; Stage a specific file for the next commit. git add . Stage all changes in the current directory. git commit -m &#34;message&#34; Commit staged changes with a message. git log View the commit history. git log --oneline View the commit history in a compact format. git diff Show changes between working directory and index/staging area. git diff --staged Show changes between staging area and last commit. Branching &amp; Merging Command Description git branch List all branches. git branch &lt;branch-name&gt; Create a new branch. git checkout &lt;branch-name&gt; Switch to a different branch. git checkout -b &lt;branch-name&gt; Create a new branch and switch to it. git merge &lt;branch-name&gt; Merge a branch into the current branch. git branch -d &lt;branch-name&gt; Delete a branch (only if fully merged). git branch -D &lt;branch-name&gt; Force delete a branch. git stash Save changes for later without committing. git stash pop Apply the most recent stash and remove it from the stash list. git stash list View saved stashes. Remote Repositories Command Description git remote -v View remote URLs linked to your repository. git remote add origin &lt;url&gt; Add a remote repository with the name origin. git push -u origin &lt;branch-name&gt; Push to a remote branch and set it as the upstream for future pushes. git push origin &lt;branch-name&gt; Push local changes to a remote repository. git push --all origin Push all branches to the remote repository. git pull Fetch and merge changes from the remote repository. git fetch Fetch changes from the remote repository (without merging). Undoing Changes Command Description git reset &lt;file&gt; Unstage a file (leave changes in working directory). git reset --hard &lt;commit&gt; Reset the working directory and index to a previous commit (dangerous!). git checkout -- &lt;file&gt; Discard changes in the working directory for a file. git revert &lt;commit&gt; Create a new commit that undoes changes from a specific commit. git reset HEAD~1 Undo the last commit, keep changes in the working directory. Viewing and Comparing Changes Command Description git show &lt;commit&gt; Show the changes in a specific commit. git diff &lt;branch-name&gt; Show the differences between your working directory and a branch. git log --graph --oneline --all View the history of all branches in a compact graph. Tagging Command Description git tag List all tags in the repository. git tag &lt;tag-name&gt; Create a new tag at the current commit. git tag -a &lt;tag-name&gt; -m &#34;message&#34; Create an annotated tag with a message. git push origin &lt;tag-name&gt; Push a tag to the remote repository. git push --tags Push all tags to the remote repository. Configuration Command Description git config --list View all Git configuration settings. git config user.name &#34;Your Name&#34; Set your Git username. git config user.email &#34;you@example.com&#34; Set your Git email address. git config --global user.name &#34;Your Name&#34; Set your Git username globally for all repositories. git config --global core.editor &#34;vim&#34; Set the default text editor for Git globally. Working with Commits Command Description git commit --amend Amend the last commit (e.g., to fix the commit message). git cherry-pick &lt;commit&gt; Apply the changes from a specific commit on top of your current branch. Git Aliases (Optional, for Convenience) You can create aliases for frequently used commands:">
-  <meta itemprop="wordCount" content="615">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="My New Hugo Site">
-  <meta name="twitter:description" content="Git Basics Command Description git init Initialize a new Git repository in your current directory. git clone &lt;repo-url&gt; Clone an existing repository from a URL. git status Show the current state of the working directory and staging area. git add &lt;file&gt; Stage a specific file for the next commit. git add . Stage all changes in the current directory. git commit -m &#34;message&#34; Commit staged changes with a message. git log View the commit history. git log --oneline View the commit history in a compact format. git diff Show changes between working directory and index/staging area. git diff --staged Show changes between staging area and last commit. Branching &amp; Merging Command Description git branch List all branches. git branch &lt;branch-name&gt; Create a new branch. git checkout &lt;branch-name&gt; Switch to a different branch. git checkout -b &lt;branch-name&gt; Create a new branch and switch to it. git merge &lt;branch-name&gt; Merge a branch into the current branch. git branch -d &lt;branch-name&gt; Delete a branch (only if fully merged). git branch -D &lt;branch-name&gt; Force delete a branch. git stash Save changes for later without committing. git stash pop Apply the most recent stash and remove it from the stash list. git stash list View saved stashes. Remote Repositories Command Description git remote -v View remote URLs linked to your repository. git remote add origin &lt;url&gt; Add a remote repository with the name origin. git push -u origin &lt;branch-name&gt; Push to a remote branch and set it as the upstream for future pushes. git push origin &lt;branch-name&gt; Push local changes to a remote repository. git push --all origin Push all branches to the remote repository. git pull Fetch and merge changes from the remote repository. git fetch Fetch changes from the remote repository (without merging). Undoing Changes Command Description git reset &lt;file&gt; Unstage a file (leave changes in working directory). git reset --hard &lt;commit&gt; Reset the working directory and index to a previous commit (dangerous!). git checkout -- &lt;file&gt; Discard changes in the working directory for a file. git revert &lt;commit&gt; Create a new commit that undoes changes from a specific commit. git reset HEAD~1 Undo the last commit, keep changes in the working directory. Viewing and Comparing Changes Command Description git show &lt;commit&gt; Show the changes in a specific commit. git diff &lt;branch-name&gt; Show the differences between your working directory and a branch. git log --graph --oneline --all View the history of all branches in a compact graph. Tagging Command Description git tag List all tags in the repository. git tag &lt;tag-name&gt; Create a new tag at the current commit. git tag -a &lt;tag-name&gt; -m &#34;message&#34; Create an annotated tag with a message. git push origin &lt;tag-name&gt; Push a tag to the remote repository. git push --tags Push all tags to the remote repository. Configuration Command Description git config --list View all Git configuration settings. git config user.name &#34;Your Name&#34; Set your Git username. git config user.email &#34;you@example.com&#34; Set your Git email address. git config --global user.name &#34;Your Name&#34; Set your Git username globally for all repositories. git config --global core.editor &#34;vim&#34; Set the default text editor for Git globally. Working with Commits Command Description git commit --amend Amend the last commit (e.g., to fix the commit message). git cherry-pick &lt;commit&gt; Apply the changes from a specific commit on top of your current branch. Git Aliases (Optional, for Convenience) You can create aliases for frequently used commands:">
-
-	
-  </head>
-
-  <body class="ma0 avenir bg-near-white">
-
-    
-   
+<title>Git Cheatsheet | kr-blog</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" >
+<link rel="canonical" href="http://localhost:1313/i.t-operations/git-cheatsheet/">
+<link rel="stylesheet" href="/book.min.f019955684d0f5b49c2f421c16bd7274f6ec699bc5a7c19809cbd22ac70e826e.css" integrity="sha256-8BmVVoTQ9bScL0IcFr1ydPbsaZvFp8GYCcvSKscOgm4=" crossorigin="anonymous">
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.668f039a6fda5734f89ebfb8ccb5ded116cd751b7ebcba7fccc8fb2e6e6fa8f3.js" integrity="sha256-Zo8Dmm/aVzT4nr&#43;4zLXe0RbNdRt&#43;vLp/zMj7Lm5vqPM=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
   
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>kr-blog</span>
+  </a>
+</h2>
 
-  <header>
-    <div class="bg-black">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l justify-between items-center center">
-    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
-      
-        My New Hugo Site
-      
-    </a>
-    <div class="flex-l items-center">
-      
 
-      
-      
-<div class="ananke-socials">
-  
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
 </div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
 
-    </div>
-  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </nav>
 
-    </div>
-  </header>
 
 
 
-    <main class="pb7" role="main">
-      
-  
-  <article class="flex-l flex-wrap justify-between mw8 center ph3">
-    <header class="mt4 w-100">
-      <aside class="instapaper_ignoref b helvetica tracked ttu">
-          
-        I.T Operations
-      </aside>
-      
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
 
 
+ 
+      </div>
+    </aside>
 
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
 
+  <strong>Git Cheatsheet</strong>
 
-
-
-
-
-
-  <div id="sharing" class="mt3 ananke-socials">
+  <label for="toc-control">
     
-  </div>
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
 
 
-      <h1 class="f1 athelas mt3 mb1"></h1>
-      
-      
-      
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#git-basics"><strong>Git Basics</strong></a></li>
+        <li><a href="#branching--merging"><strong>Branching &amp; Merging</strong></a></li>
+        <li><a href="#remote-repositories"><strong>Remote Repositories</strong></a></li>
+        <li><a href="#undoing-changes"><strong>Undoing Changes</strong></a></li>
+        <li><a href="#viewing-and-comparing-changes"><strong>Viewing and Comparing Changes</strong></a></li>
+        <li><a href="#tagging"><strong>Tagging</strong></a></li>
+        <li><a href="#configuration"><strong>Configuration</strong></a></li>
+        <li><a href="#working-with-commits"><strong>Working with Commits</strong></a></li>
+        <li><a href="#git-aliases-optional-for-convenience"><strong>Git Aliases (Optional, for Convenience)</strong></a></li>
+        <li><a href="#git-rebase"><strong>Git Rebase</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
 
       
       
-    </header>
-    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h3 id="git-basics"><strong>Git Basics</strong></h3>
+  <article class="markdown book-article"><h3 id="git-basics">
+  <strong>Git Basics</strong>
+  <a class="anchor" href="#git-basics">#</a>
+</h3>
 <table>
   <thead>
       <tr>
@@ -446,7 +493,10 @@ You can create aliases for frequently used commands:">
       </tr>
   </tbody>
 </table>
-<h3 id="branching--merging"><strong>Branching &amp; Merging</strong></h3>
+<h3 id="branching--merging">
+  <strong>Branching &amp; Merging</strong>
+  <a class="anchor" href="#branching--merging">#</a>
+</h3>
 <table>
   <thead>
       <tr>
@@ -497,7 +547,10 @@ You can create aliases for frequently used commands:">
       </tr>
   </tbody>
 </table>
-<h3 id="remote-repositories"><strong>Remote Repositories</strong></h3>
+<h3 id="remote-repositories">
+  <strong>Remote Repositories</strong>
+  <a class="anchor" href="#remote-repositories">#</a>
+</h3>
 <table>
   <thead>
       <tr>
@@ -536,7 +589,10 @@ You can create aliases for frequently used commands:">
       </tr>
   </tbody>
 </table>
-<h3 id="undoing-changes"><strong>Undoing Changes</strong></h3>
+<h3 id="undoing-changes">
+  <strong>Undoing Changes</strong>
+  <a class="anchor" href="#undoing-changes">#</a>
+</h3>
 <table>
   <thead>
       <tr>
@@ -567,7 +623,10 @@ You can create aliases for frequently used commands:">
       </tr>
   </tbody>
 </table>
-<h3 id="viewing-and-comparing-changes"><strong>Viewing and Comparing Changes</strong></h3>
+<h3 id="viewing-and-comparing-changes">
+  <strong>Viewing and Comparing Changes</strong>
+  <a class="anchor" href="#viewing-and-comparing-changes">#</a>
+</h3>
 <table>
   <thead>
       <tr>
@@ -590,7 +649,10 @@ You can create aliases for frequently used commands:">
       </tr>
   </tbody>
 </table>
-<h3 id="tagging"><strong>Tagging</strong></h3>
+<h3 id="tagging">
+  <strong>Tagging</strong>
+  <a class="anchor" href="#tagging">#</a>
+</h3>
 <table>
   <thead>
       <tr>
@@ -621,7 +683,10 @@ You can create aliases for frequently used commands:">
       </tr>
   </tbody>
 </table>
-<h3 id="configuration"><strong>Configuration</strong></h3>
+<h3 id="configuration">
+  <strong>Configuration</strong>
+  <a class="anchor" href="#configuration">#</a>
+</h3>
 <table>
   <thead>
       <tr>
@@ -652,7 +717,10 @@ You can create aliases for frequently used commands:">
       </tr>
   </tbody>
 </table>
-<h3 id="working-with-commits"><strong>Working with Commits</strong></h3>
+<h3 id="working-with-commits">
+  <strong>Working with Commits</strong>
+  <a class="anchor" href="#working-with-commits">#</a>
+</h3>
 <table>
   <thead>
       <tr>
@@ -671,13 +739,19 @@ You can create aliases for frequently used commands:">
       </tr>
   </tbody>
 </table>
-<h3 id="git-aliases-optional-for-convenience"><strong>Git Aliases (Optional, for Convenience)</strong></h3>
+<h3 id="git-aliases-optional-for-convenience">
+  <strong>Git Aliases (Optional, for Convenience)</strong>
+  <a class="anchor" href="#git-aliases-optional-for-convenience">#</a>
+</h3>
 <p>You can create aliases for frequently used commands:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git config --global alias.co checkout 
 </span></span><span style="display:flex;"><span>git config --global alias.br branch 
 </span></span><span style="display:flex;"><span>git config --global alias.cm commit 
 </span></span><span style="display:flex;"><span>git config --global alias.st status
-</span></span></code></pre></div><h3 id="git-rebase"><strong>Git Rebase</strong></h3>
+</span></span></code></pre></div><h3 id="git-rebase">
+  <strong>Git Rebase</strong>
+  <a class="anchor" href="#git-rebase">#</a>
+</h3>
 <table>
   <thead>
       <tr>
@@ -700,37 +774,83 @@ You can create aliases for frequently used commands:">
       </tr>
   </tbody>
 </table>
-<ul class="pa0">
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
   
-</ul>
-<div class="mt6 instapaper_ignoref">
-      
-      
-      </div>
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
     </div>
 
-    <aside class="w-30-l mt6-l">
-
-
-
-
-</aside>
-
-  </article>
-
-    </main>
-    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://example.org/" >
-    &copy;  My New Hugo Site 2024 
-  </a>
-    <div>
-<div class="ananke-socials">
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
   
-</div>
-</div>
-  </div>
-</footer>
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#git-basics"><strong>Git Basics</strong></a></li>
+        <li><a href="#branching--merging"><strong>Branching &amp; Merging</strong></a></li>
+        <li><a href="#remote-repositories"><strong>Remote Repositories</strong></a></li>
+        <li><a href="#undoing-changes"><strong>Undoing Changes</strong></a></li>
+        <li><a href="#viewing-and-comparing-changes"><strong>Viewing and Comparing Changes</strong></a></li>
+        <li><a href="#tagging"><strong>Tagging</strong></a></li>
+        <li><a href="#configuration"><strong>Configuration</strong></a></li>
+        <li><a href="#working-with-commits"><strong>Working with Commits</strong></a></li>
+        <li><a href="#git-aliases-optional-for-convenience"><strong>Git Aliases (Optional, for Convenience)</strong></a></li>
+        <li><a href="#git-rebase"><strong>Git Rebase</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
 
-  </body>
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

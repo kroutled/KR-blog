@@ -2,30 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://example.org/posts/my-first-post/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2024-10-03T14:34:54+02:00</lastmod>
   </url><url>
-    <loc>https://example.org/</loc>
+    <loc>http://localhost:1313/posts/my-first-post/</loc>
     <lastmod>2024-10-03T14:34:54+02:00</lastmod>
   </url><url>
-    <loc>https://example.org/posts/</loc>
+    <loc>http://localhost:1313/posts/</loc>
     <lastmod>2024-10-03T14:34:54+02:00</lastmod>
   </url><url>
-    <loc>https://example.org/posts/folder1/my-second-post/</loc>
+    <loc>http://localhost:1313/posts/folder1/my-second-post/</loc>
     <lastmod>2024-10-03T14:34:54+02:00</lastmod>
   </url><url>
-    <loc>https://example.org/i.t-operations/cmd-&#43;-powershell-cheatsheet/</loc>
+    <loc>http://localhost:1313/i.t-operations/cmd-&#43;-powershell-cheatsheet/</loc>
   </url><url>
-    <loc>https://example.org/i.t-operations/git-cheatsheet/</loc>
+    <loc>http://localhost:1313/i.t-operations/git-cheatsheet/</loc>
   </url><url>
-    <loc>https://example.org/i.t-operations/mysql-cheatsheet/</loc>
+    <loc>http://localhost:1313/i.t-operations/mysql-cheatsheet/</loc>
   </url><url>
-    <loc>https://example.org/i.t-operations/terminal-cheatsheet/</loc>
+    <loc>http://localhost:1313/i.t-operations/terminal-cheatsheet/</loc>
   </url><url>
-    <loc>https://example.org/categories/</loc>
+    <loc>http://localhost:1313/categories/</loc>
   </url><url>
-    <loc>https://example.org/i.t-operations/</loc>
+    <loc>http://localhost:1313/i.t-operations/</loc>
   </url><url>
-    <loc>https://example.org/tags/</loc>
+    <loc>http://localhost:1313/tags/</loc>
   </url>
 </urlset>
